@@ -1,5 +1,5 @@
 import { Home } from '@/pages/home/ui/Home';
 
 export default function HomePage() {
-  return <Home />;
+  return <Home>Home</Home>;
 }
