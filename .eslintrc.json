@@ -1,23 +1,27 @@
 {
+  "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "import", "simple-import-sort", "prettier"],
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
+  "settings": {
+    "import/resolver": {
+      "typescript": { "project": "./tsconfig.json" },
+      "node": { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    }
+  },
   "rules": {
     "prettier/prettier": "error",
-    "@typescript-eslint/no-unused-vars": ["warn"],
-    "react/jsx-sort-props": [
-      "warn",
-      {
-        "callbacksLast": true,
-        "shorthandFirst": true,
-        "ignoreCase": true,
-        "noSortAlphabetically": false,
-        "reservedFirst": true
-      }
-    ]
-  }
+    "@typescript-eslint/no-unused-vars": "warn",
+
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/no-duplicates": "error",
+    "import/newline-after-import": "error",
+    "import/order": "off"
+  },
+  "ignorePatterns": ["**/.next/**", "node_modules"]
 }
