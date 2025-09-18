@@ -10,6 +10,14 @@
   --color-light-green: #05cd99;
   --color-light-white: #f4f7fe;
   --color-deep-blue: #4318ff;
+
+  /* Icons colors */
+  --color-light-icon: #a3aed0;
+
+  /* Linear Colors */
+  --color-light-blue: #868cff;
+  --color-deep-blue: #4318ff;
+  --color-linear-background: linear-gradient(135deg, #868cff 0%, #4318ff 100%);
 }
 
 body {
