@@ -1,7 +1,7 @@
 import { ListItemKey, ListProps } from '@/entities/ui/list/model/types';
 
 export const List = <T extends { id: ListItemKey }>({
-  tag: Tag,
+  tag: Tag = 'ul',
   renderList,
   className = '',
   itemClassName = '',
