@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 import { ContainerProps } from '@/entities/ui/container/model/types';
-import { parseSize } from '@/shared/lib/ui/parseSize';
+import { parseSize } from '@/shared/lib/helpers/parseSize';
 
 export const Container: FC<ContainerProps> = ({
   children,
