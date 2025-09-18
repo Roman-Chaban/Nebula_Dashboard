@@ -1,5 +1,5 @@
 import { type ReactNode, type FC } from 'react';
-import Sidebar from '@/widgets/ui/Sidebar/Sidebar';
+import Sidebar from '@/widgets/Sidebar/ui/Sidebar/Sidebar';
 
 // TODO: This component will be adding for HomePage
 

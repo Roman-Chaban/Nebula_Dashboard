@@ -1,5 +1,5 @@
 import { type FC } from 'react';
-import { SidebarLogo } from '@/widgets/ui/Sidebar/SidebarLogo';
+import { SidebarLogo } from '@/widgets/Sidebar/ui/Sidebar/SidebarLogo';
 import { Container } from '@/shared/ui/Container/Container';
 
 // TODO: This component will be implementing soon [PR #7]
