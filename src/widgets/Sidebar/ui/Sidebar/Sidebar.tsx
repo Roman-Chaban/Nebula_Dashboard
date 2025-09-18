@@ -1,17 +1,19 @@
 import { type FC } from 'react';
-import { SidebarLogo } from '@/widgets/Sidebar/ui/Sidebar/SidebarLogo';
+import { SidebarLogo, SidebarNav, SidebarUpsellCard } from '@/widgets/Sidebar/index';
 import { Container } from '@/shared/ui/Container/Container';
+import { sidebarNavItems, upsellCardInfo } from '@/widgets/Sidebar/model/config';
 
-// TODO: This component will be implementing soon [PR #7]
 const Sidebar: FC = () => {
   return (
     <Container
-      htmlTag="article"
+      htmlTag="aside"
       width="100%"
       height="100%"
-      className="flex min-h-[100vh] max-w-72 justify-center bg-white"
+      className="flex min-h-screen max-w-72 flex-col bg-white"
     >
       <SidebarLogo />
+      <SidebarNav items={sidebarNavItems} />
+      <SidebarUpsellCard info={upsellCardInfo} />
     </Container>
   );
 };
