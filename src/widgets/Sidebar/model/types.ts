@@ -8,12 +8,8 @@ export type NavItem = {
   onClick?: () => void;
 };
 
-export type NavItems = NavItem[];
-
-export type NavLinkRenderer = (item: NavItem, children: ReactNode) => ReactNode;
-
 export type SidebarNavProps = {
-  items: NavItems;
+  sidebarNavItems: NavItems;
   className?: string;
   itemClassName?: string;
   LinkView?: NavLinkRenderer;
@@ -30,5 +26,9 @@ export type UpsellCardInfo = {
 };
 
 export type UpsellCardProps = {
-  info: UpsellCardInfo;
+  upsellCardInfo: UpsellCardInfo;
 };
+
+export type NavItems = NavItem[];
+
+export type NavLinkRenderer = (item: NavItem, children: ReactNode) => ReactNode;
