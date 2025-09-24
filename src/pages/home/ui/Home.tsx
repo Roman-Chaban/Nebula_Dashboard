@@ -1,17 +1,12 @@
-import { type ReactNode, type FC } from 'react';
+import { type FC } from 'react';
 import { Sidebar } from '@/widgets/Sidebar/index';
 
 // TODO: This component will be adding for HomePage
 
-export type HomeProps = {
-  children?: ReactNode;
-};
-
-const Home: FC<HomeProps> = ({ children }) => {
+const Home: FC = () => {
   return (
     <>
       <Sidebar />
-      {children}
     </>
   );
 };
