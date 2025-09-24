@@ -1,9 +1,11 @@
 import { type FC } from 'react';
+
 import { Container } from '@/shared/ui/Container/Container';
 import { UpsellCardIcon, UpsellCardMediumIcon } from '@/shared/ui/Icons/Icons';
+
 import { UpsellCardProps } from '@/widgets/Sidebar/model/types';
 
-export const SidebarUpsellCard: FC<UpsellCardProps> = ({ info }) => {
+export const SidebarUpsellCard: FC<UpsellCardProps> = ({ upsellCardInfo }) => {
   return (
     <Container
       htmlTag="div"
@@ -20,9 +22,15 @@ export const SidebarUpsellCard: FC<UpsellCardProps> = ({ info }) => {
         className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
       />
       <Container htmlTag="div" className="flex flex-col items-center">
-        <h2 className="min-h-[28px] text-[16px] text-[var(--color-white)]">{info.title}</h2>
-        <span className="text-[14px] text-[var(--color-white)]">{info.primarySubtitle}</span>
-        <span className="text-[14px] text-[var(--color-white)]">{info.secondarySubtitle}</span>
+        <h2 className="min-h-[28px] text-[16px] text-[var(--color-white)]">
+          {upsellCardInfo.title}
+        </h2>
+        <span className="text-[14px] text-[var(--color-white)]">
+          {upsellCardInfo.primarySubtitle}
+        </span>
+        <span className="text-[14px] text-[var(--color-white)]">
+          {upsellCardInfo.secondarySubtitle}
+        </span>
       </Container>
     </Container>
   );

@@ -1,10 +1,10 @@
 import { type FC } from 'react';
 import { List } from '@/shared/ui/List/ui/List';
-import { SidebarNavItem } from './SidebarNavItem';
+import { SidebarNavItem } from '@/widgets/Sidebar/ui/Sidebar/SidebarNavItem';
 import { SidebarNavProps } from '@/widgets/Sidebar/model/types';
 
 export const SidebarNav: FC<SidebarNavProps> = ({
-  items,
+  sidebarNavItems: items,
   LinkView = (_item, children) => children,
   className = 'flex flex-col gap-5 pt-[38px] pl-8',
   itemClassName = 'flex items-center gap-3 min-h-[36px]',
@@ -22,3 +22,5 @@ export const SidebarNav: FC<SidebarNavProps> = ({
     </nav>
   );
 };
+
+SidebarNav.displayName = 'SidebarNav';

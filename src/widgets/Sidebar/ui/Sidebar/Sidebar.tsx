@@ -12,8 +12,8 @@ const Sidebar: FC = () => {
       className="flex min-h-screen max-w-72 flex-col bg-white"
     >
       <SidebarLogo />
-      <SidebarNav items={sidebarNavItems} />
-      <SidebarUpsellCard info={upsellCardInfo} />
+      <SidebarNav sidebarNavItems={sidebarNavItems} />
+      <SidebarUpsellCard upsellCardInfo={upsellCardInfo} />
     </Container>
   );
 };
