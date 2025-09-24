@@ -16,8 +16,17 @@
 
   /* Linear Colors */
   --color-light-blue: #868cff;
-  --color-deep-blue: #4318ff;
   --color-linear-background: linear-gradient(135deg, #868cff 0%, #4318ff 100%);
+
+  /* Widths */
+
+  /* Paddings */
+
+  /* Margins */
+
+  /* Shadows */
+
+  /* Z-Index */
 }
 
 body {
