@@ -3,6 +3,7 @@ import { ROUTES } from '@/shared/config/constants';
 
 const { DASHBOARD } = ROUTES;
 
-export default function HomePage() {
+
+export default function Home() {
   redirect(DASHBOARD);
 }
