@@ -1,12 +1,8 @@
-import Home from '@/pages/home/ui/Home';
-import { Header } from '@/widgets/Header/ui/Header';
-import { Container } from '@/shared/ui/Container/Container';
+import { redirect } from 'next/navigation';
+import { ROUTES } from '@/shared/config/constants';
 
-export default function HomePage() {
-  return (
-    <Container htmlTag="div" className="flex">
-      <Home />
-      <Header title="Main Dashboard" subtitle="Pages / Dashboard" />
-    </Container>
-  );
+const { DASHBOARD } = ROUTES;
+
+export default function Home() {
+  redirect(DASHBOARD);
 }
