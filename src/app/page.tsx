@@ -1,5 +1,8 @@
-import { Home } from '@/pages/home/ui/Home';
+import { redirect } from 'next/navigation';
+import { ROUTES } from '@/shared/config/constants';
+
+const { DASHBOARD } = ROUTES;
 
 export default function HomePage() {
-  return <Home>Home</Home>;
+  redirect(DASHBOARD);
 }
