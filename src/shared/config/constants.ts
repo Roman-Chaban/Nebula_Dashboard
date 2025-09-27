@@ -1,7 +1,7 @@
 export const ROUTES = {
   HOME: '/',
   DASHBOARD: '/dashboard',
-  MARKET: '/marketplace',
+  MARKETPLACE: '/marketplace',
   TABLES: '/tables',
   KANBAN: '/kanban',
   PROFILE: '/profile',
