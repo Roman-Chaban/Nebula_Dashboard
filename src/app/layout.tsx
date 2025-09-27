@@ -2,6 +2,7 @@ import { type ReactNode } from 'react';
 import { DM_Sans } from 'next/font/google';
 import '@/styles/globals.css';
 import { Sidebar } from '@/widgets/Sidebar';
+import { Container } from '@/shared/ui/Container/Container';
 
 export const dm_sans = DM_Sans({
   subsets: ['latin'],
@@ -10,16 +11,14 @@ export const dm_sans = DM_Sans({
   weight: ['400', '500', '600', '700'],
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={dm_sans.className}>
-        <Sidebar />
-        <main>{children}</main>
+        <Container className="flex">
+          <Sidebar />
+          {children}
+        </Container>
       </body>
     </html>
   );
