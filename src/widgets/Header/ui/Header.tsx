@@ -4,6 +4,7 @@ import { HeaderInfo } from '@/widgets/Header/ui/HeaderInfo';
 import { HeaderInput } from '@/widgets/Header/ui/HeaderInput';
 import { Container } from '@/shared/ui/Container/Container';
 import { HeaderInputRightSide } from './HeaderInputRightSide';
+import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher/LanguageSwitcher';
 
 export const Header: FC<HeaderProps> = ({ title, subtitle }) => {
   return (
@@ -12,6 +13,7 @@ export const Header: FC<HeaderProps> = ({ title, subtitle }) => {
         <HeaderInfo title={title} subtitle={subtitle} />
         <HeaderInput>
           <HeaderInputRightSide />
+          <LanguageSwitcher />
         </HeaderInput>
       </Container>
     </header>
