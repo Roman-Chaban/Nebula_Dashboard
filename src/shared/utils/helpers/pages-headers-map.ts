@@ -1,10 +1,17 @@
 import { PAGE_HEADER_CONFIGS } from '@/shared/config/pages-headers';
+import { LOCALES } from '@/shared/config/constants';
 
-export const PAGE_HEADERS_MAP: Record<string, { title: string; subtitle: string }> =
-  PAGE_HEADER_CONFIGS.reduce(
-    (acc, current) => {
-      acc[current.path] = { title: current.title, subtitle: current.title };
-      return acc;
-    },
-    {} as Record<string, { title: string; subtitle: string }>,
-  );
+export const PAGE_HEADERS_MAP: Record<
+  string,
+  Record<string, { titleKey: string; subtitleKey: string }>
+> = {};
+
+Object.values(LOCALES).forEach((locale) => {
+  PAGE_HEADER_CONFIGS.forEach((config) => {
+    PAGE_HEADERS_MAP[locale] = PAGE_HEADERS_MAP[locale] || {};
+    PAGE_HEADERS_MAP[locale][config.path] = {
+      titleKey: config.titleKey,
+      subtitleKey: config.subtitleKey,
+    };
+  });
+});
