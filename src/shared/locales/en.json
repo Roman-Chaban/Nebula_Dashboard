@@ -1,0 +1,18 @@
+{
+  "NAVIGATION_MENU": {
+    "dashboard": "Dashboard",
+    "market": "NFT Marketplace",
+    "tables": "Tables",
+    "kanban": "Kanban",
+    "profile": "Profile",
+    "signin": "Sign In"
+  },
+  "PAGE_HEADERS": {
+    "DASHBOARD": { "TITLE": "Main Dashboard", "SUBTITLE": "Pages / Dashboard" },
+    "MARKETPLACE": { "TITLE": "NFT Marketplace", "SUBTITLE": "Pages / NFT Marketplace" },
+    "TABLES": { "TITLE": "Tables", "SUBTITLE": "Pages / Tables" },
+    "KANBAN": { "TITLE": "Kanban", "SUBTITLE": "Pages / Kanban" },
+    "PROFILE": { "TITLE": "Profile", "SUBTITLE": "Pages / Profile" },
+    "DEFAULT": { "TITLE": "Default Title", "SUBTITLE": "Default Subtitle" }
+  }
+}

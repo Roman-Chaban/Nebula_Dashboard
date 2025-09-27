@@ -1,0 +1,18 @@
+{
+  "NAVIGATION_MENU": {
+    "dashboard": "Панель",
+    "market": "Маркетплейс",
+    "tables": "Таблиці",
+    "kanban": "Канбан",
+    "profile": "Профіль",
+    "signin": "Вхід"
+  },
+  "PAGE_HEADERS": {
+    "DASHBOARD": { "TITLE": "Головна Панель", "SUBTITLE": "Сторінки / Панель" },
+    "MARKETPLACE": { "TITLE": "NFT Маркетплейс", "SUBTITLE": "Сторінки / NFT Маркетплейс" },
+    "TABLES": { "TITLE": "Таблиці", "SUBTITLE": "Сторінки / Таблиці" },
+    "KANBAN": { "TITLE": "Канбан", "SUBTITLE": "Сторінки / Канбан" },
+    "PROFILE": { "TITLE": "Профіль", "SUBTITLE": "Сторінки / Профіль" },
+    "DEFAULT": { "TITLE": "Назва за замовчуванням", "SUBTITLE": "Підзаголовок за замовчуванням" }
+  }
+}
