@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 export type NavItem = {
   id: number;
   label: string;
-  icon: ReactNode;
+  icon: ReactElement<{ className?: string }>;
   href: string;
   onClick?: () => void;
 };

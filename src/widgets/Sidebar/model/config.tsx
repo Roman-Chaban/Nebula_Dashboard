@@ -9,7 +9,7 @@ import {
 import { NavItems, UpsellCardInfo } from '@/widgets/Sidebar/model/types';
 import { ROUTES } from '@/shared/config/constants';
 
-export const { HOME, DASHBOARD, MARKET, KANBAN, TABLES, PROFILE, SIGNIN } = ROUTES;
+export const { HOME, DASHBOARD, MARKETPLACE: MARKET, KANBAN, TABLES, PROFILE, SIGNIN } = ROUTES;
 
 export const sidebarNavItems: NavItems = [
   { id: 1, label: 'Dashboard', icon: <DashboardIcon />, href: DASHBOARD },

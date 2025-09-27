@@ -1,9 +1,9 @@
 export const ROUTES = {
   HOME: '/',
   DASHBOARD: '/dashboard',
-  MARKET: '/market',
+  MARKETPLACE: '/marketplace',
   TABLES: '/tables',
-  KANBAN: '/kanbad',
+  KANBAN: '/kanban',
   PROFILE: '/profile',
   SIGNIN: '/signin',
 };

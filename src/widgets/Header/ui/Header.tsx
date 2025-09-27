@@ -7,8 +7,8 @@ import { HeaderInputRightSide } from './HeaderInputRightSide';
 
 export const Header: FC<HeaderProps> = ({ title, subtitle }) => {
   return (
-    <header className="h-max w-full flex">
-      <Container className="flex w-full items-center justify-between pt-12 pr-[22px] pb-7 pl-[30px]">
+    <header className="flex h-max w-full">
+      <Container className="flex w-full items-center justify-between">
         <HeaderInfo title={title} subtitle={subtitle} />
         <HeaderInput>
           <HeaderInputRightSide />
