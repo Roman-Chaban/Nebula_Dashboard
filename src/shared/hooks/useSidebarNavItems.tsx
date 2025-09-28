@@ -2,10 +2,12 @@
 
 import { useParams } from 'next/navigation';
 import { sidebarNavItems as navItemsConfig } from '@/widgets/Sidebar/model/config';
-import { LOCALES, type Locale } from '@/shared/config/constants';
+import { LOCALES, ROUTES, type Locale } from '@/shared/config/constants';
 import { isLocale } from '@/shared/lib/helpers/isLocale';
 
-export function useSidebarNavItems() {
+const { HOME } = ROUTES;
+
+export const useSidebarNavItems = () => {
   const params = useParams();
   let localeParam = params?.locale;
 
@@ -15,6 +17,6 @@ export function useSidebarNavItems() {
 
   return navItemsConfig.map((item) => ({
     ...item,
-    href: `/${currentLocale}${item.href.startsWith('/') ? item.href : '/' + item.href}`,
+    href: `/${currentLocale}${item.href.startsWith(HOME) ? item.href : HOME + item.href}`,
   }));
-}
+};
