@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { LOCALES, ROUTES, type Locale } from '@/shared/config/constants';
+import { SUPPORTED_LOCALES, ROUTES, type Locale } from '@/shared/config/constants';
 import { toLocale } from '@/shared/utils/helpers/toLocale';
 
-const SUPPORTED_LOCALES: Locale[] = Object.values(LOCALES);
 const { HOME, DASHBOARD } = ROUTES;
 
 export function middleware(request: NextRequest) {
