@@ -5,22 +5,38 @@ import { PageLayoutProps } from '@/entities/ui/page-layout/page-layout';
 import { Container } from '@/shared/ui/Container/Container';
 import { Header } from '@/widgets/Header/ui/Header';
 import { PAGE_HEADERS_MAP } from '@/shared/utils/helpers/pages-headers-map';
-import { usePathname } from 'next/navigation';
-import { ROUTES } from '@/shared/config/constants';
+import { usePathname, useParams } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
+import { LOCALES, type Locale, SUPPORTED_LOCALES } from '@/shared/config/constants';
 
-const { HOME } = ROUTES;
+export const PageLayout: FC<PageLayoutProps> = ({ children }) => {
+  const pathname = usePathname() || '/';
+  const params = useParams();
 
-export const PageLayout: FC<PageLayoutProps> = ({ children }: PageLayoutProps) => {
-  const pathname = usePathname() || HOME;
+  let localeParam = params?.locale;
+  if (Array.isArray(localeParam)) localeParam = localeParam[0];
 
-  const { title, subtitle } = PAGE_HEADERS_MAP[pathname] ?? {
-    title: 'Default Title',
-    subtitle: 'Default Subtitle',
+  const locale: Locale = SUPPORTED_LOCALES.includes(localeParam as Locale)
+    ? (localeParam as Locale)
+    : LOCALES.EN;
+
+  let pathnameClean = pathname;
+  SUPPORTED_LOCALES.forEach((locale) => {
+    if (pathname.startsWith(`/${locale}`)) {
+      pathnameClean = pathname.replace(`/${locale}`, '') || '/';
+    }
+  });
+
+  const { t } = useTranslation();
+
+  const headers = PAGE_HEADERS_MAP[locale]?.[pathnameClean] ?? {
+    titleKey: 'PAGE_HEADERS.DEFAULT.TITLE',
+    subtitleKey: 'PAGE_HEADERS.DEFAULT.SUBTITLE',
   };
 
   return (
     <Container className="flex w-full flex-col gap-[29px] pt-12 pr-[22px] pb-7 pl-[30px]">
-      <Header title={title} subtitle={subtitle} />
+      <Header title={t(headers.titleKey)} subtitle={t(headers.subtitleKey)} />
       <main>{children}</main>
     </Container>
   );

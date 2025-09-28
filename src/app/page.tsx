@@ -1,9 +1,10 @@
 import { redirect } from 'next/navigation';
-import { ROUTES } from '@/shared/config/constants';
+import { ROUTES, LOCALES } from '@/shared/config/constants';
 
 const { DASHBOARD } = ROUTES;
 
 
 export default function Home() {
-  redirect(DASHBOARD);
+  const locale = LOCALES.EN;
+  redirect(`/${locale}/${DASHBOARD}`);
 }
