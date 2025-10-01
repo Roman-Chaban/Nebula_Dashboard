@@ -8,16 +8,19 @@
     "signin": "Вхід"
   },
   "PAGE_HEADERS": {
-    "DASHBOARD": { "TITLE": "Головна Панель", "SUBTITLE": "Сторінки / Панель" },
-    "MARKETPLACE": { "TITLE": "NFT Маркетплейс", "SUBTITLE": "Сторінки / NFT Маркетплейс" },
-    "TABLES": { "TITLE": "Таблиці", "SUBTITLE": "Сторінки / Таблиці" },
-    "KANBAN": { "TITLE": "Канбан", "SUBTITLE": "Сторінки / Канбан" },
-    "PROFILE": { "TITLE": "Профіль", "SUBTITLE": "Сторінки / Профіль" },
-    "DEFAULT": { "TITLE": "Назва за замовчуванням", "SUBTITLE": "Підзаголовок за замовчуванням" }
+    "dashboard": { "title": "Головна Панель", "subtitle": "Сторінки / Панель" },
+    "marketplace": { "title": "NFT Маркетплейс", "subtitle": "Сторінки / NFT Маркетплейс" },
+    "tables": { "title": "Таблиці", "subtitle": "Сторінки / Таблиці" },
+    "kanban": { "title": "Канбан", "subtitle": "Сторінки / Канбан" },
+    "profile": { "title": "Профіль", "subtitle": "Сторінки / Профіль" },
+    "default": { "title": "Назва за замовчуванням", "subtitle": "Підзаголовок за замовчуванням" }
   },
   "UPSELL_CARD": {
     "title": "Оновіть до PRO",
     "primary_subtitle": "щоб отримати доступ до всіх функцій!",
     "secondary_subtitle": "Підключіться до Venus World!"
+  },
+  "HEADER": {
+    "input_placeholder": "Пошук"
   }
 }
