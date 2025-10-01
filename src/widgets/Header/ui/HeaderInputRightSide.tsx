@@ -1,7 +1,6 @@
 import { type FC } from 'react';
 import { headerInputRightSideItems } from '@/widgets/Header/model/config';
-import { Button } from '@/shared/ui/Button/Button';
-import { Container } from '@/shared/ui/Container/Container';
+import { Button, Container } from '@/shared/ui/index';
 
 export const HeaderInputRightSide: FC = () => {
   return (
