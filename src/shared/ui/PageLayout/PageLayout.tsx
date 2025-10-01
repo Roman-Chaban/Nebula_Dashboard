@@ -1,16 +1,18 @@
 'use client';
 
 import { type FC } from 'react';
-import { PageLayoutProps } from '@/entities/ui/page-layout/page-layout';
+import { PageLayoutProps } from '@/entities/ui/page-layout/model/page-layout';
 import { Container } from '@/shared/ui/Container/Container';
 import { Header } from '@/widgets/Header/ui/Header';
-import { PAGE_HEADERS_MAP } from '@/shared/utils/helpers/pages-headers-map';
+import { PAGE_HEADERS_MAP } from '@/shared/utils/helpers/pagesHeadersMap';
 import { usePathname, useParams } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
-import { LOCALES, type Locale, SUPPORTED_LOCALES } from '@/shared/config/constants';
+import { LOCALES, type Locale, ROUTES, SUPPORTED_LOCALES } from '@/shared/config/constants';
+
+const { HOME } = ROUTES;
 
 export const PageLayout: FC<PageLayoutProps> = ({ children }) => {
-  const pathname = usePathname() || '/';
+  const pathname = usePathname() || HOME;
   const params = useParams();
 
   let localeParam = params?.locale;
@@ -23,15 +25,15 @@ export const PageLayout: FC<PageLayoutProps> = ({ children }) => {
   let pathnameClean = pathname;
   SUPPORTED_LOCALES.forEach((locale) => {
     if (pathname.startsWith(`/${locale}`)) {
-      pathnameClean = pathname.replace(`/${locale}`, '') || '/';
+      pathnameClean = pathname.replace(`/${locale}`, '') || HOME;
     }
   });
 
   const { t } = useTranslation();
 
   const headers = PAGE_HEADERS_MAP[locale]?.[pathnameClean] ?? {
-    titleKey: 'PAGE_HEADERS.DEFAULT.TITLE',
-    subtitleKey: 'PAGE_HEADERS.DEFAULT.SUBTITLE',
+    titleKey: 'PAGE_HEADERS.default.title',
+    subtitleKey: 'PAGE_HEADERS.default.subtitle',
   };
 
   return (
