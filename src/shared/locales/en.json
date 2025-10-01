@@ -14,5 +14,10 @@
     "KANBAN": { "TITLE": "Kanban", "SUBTITLE": "Pages / Kanban" },
     "PROFILE": { "TITLE": "Profile", "SUBTITLE": "Pages / Profile" },
     "DEFAULT": { "TITLE": "Default Title", "SUBTITLE": "Default Subtitle" }
+  },
+  "UPSELL_CARD": {
+    "title": "Upgrade to PRO",
+    "primary_subtitle": "to get access to all features!",
+    "secondary_subtitle": "Connect with Venus World!"
   }
 }

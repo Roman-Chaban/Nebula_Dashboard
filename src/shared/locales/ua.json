@@ -14,5 +14,10 @@
     "KANBAN": { "TITLE": "Канбан", "SUBTITLE": "Сторінки / Канбан" },
     "PROFILE": { "TITLE": "Профіль", "SUBTITLE": "Сторінки / Профіль" },
     "DEFAULT": { "TITLE": "Назва за замовчуванням", "SUBTITLE": "Підзаголовок за замовчуванням" }
+  },
+  "UPSELL_CARD": {
+    "title": "Оновіть до PRO",
+    "primary_subtitle": "щоб отримати доступ до всіх функцій!",
+    "secondary_subtitle": "Підключіться до Venus World!"
   }
 }
