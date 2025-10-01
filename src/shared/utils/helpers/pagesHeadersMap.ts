@@ -1,4 +1,4 @@
-import { PAGE_HEADER_CONFIGS } from '@/shared/config/pages-headers';
+import { PAGE_HEADER_CONFIGS } from '@/shared/config/pagesHeaders';
 import { LOCALES } from '@/shared/config/constants';
 
 export const PAGE_HEADERS_MAP: Record<
