@@ -1,11 +1,10 @@
 'use client';
 
-import { type FC } from 'react';
+import React, { type FC } from 'react';
 import { SidebarNavItemProps } from '@/widgets/Sidebar/model/types';
 import { Container } from '@/shared/ui/Container/Container';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 export const SidebarNavItem: FC<SidebarNavItemProps> = ({ item }) => {

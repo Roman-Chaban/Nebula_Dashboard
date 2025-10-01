@@ -1,7 +1,7 @@
 'use client';
 
 import { type FC } from 'react';
-import { List } from '@/shared/ui/List/ui/List';
+import { List } from '@/shared/ui/List/List';
 import { SidebarNavItem } from '@/widgets/Sidebar/ui/Sidebar/SidebarNavItem';
 import { SidebarNavProps } from '@/widgets/Sidebar/model/types';
 import { useSidebarNavItems } from '@/shared/hooks/useSidebarNavItems';
