@@ -1,10 +1,12 @@
-import { PageLayout } from '@/shared/ui/PageLayout/PageLayout';
-import { Container } from '@/shared/ui/Container/Container';
+import { Container, PageLayout } from '@/shared/ui/index';
+import { Earnings } from '@/widgets/Earnings/ui/Earnings';
 
 export default function DashboardPage() {
   return (
     <PageLayout>
-      <Container>Dashboard content</Container>
+      <Container>
+        <Earnings />
+      </Container>
     </PageLayout>
   );
 }
