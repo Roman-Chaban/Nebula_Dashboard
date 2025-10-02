@@ -4,7 +4,7 @@ import ua from '@/shared/locales/ua.json';
 import { LOCALES } from '@/shared/config/constants';
 import { SeoMetadata, SeoPageKeys } from '@/shared/seo/seo.types';
 
-export function generateSeoMetadata(locale: string, page: SeoPageKeys): SeoMetadata {
+export const generateSeoMetadata = (locale: string, page: SeoPageKeys): SeoMetadata => {
   let translationKey;
 
   switch (locale) {
@@ -17,10 +17,10 @@ export function generateSeoMetadata(locale: string, page: SeoPageKeys): SeoMetad
       break;
   }
 
-  const seo = translationKey.SEO[page];
+  const SEO = translationKey.SEO[page];
 
   return {
-    title: seo.title,
-    description: seo.description,
+    title: SEO.title,
+    description: SEO.description,
   };
-}
+};
