@@ -26,4 +26,7 @@
 
 body {
   background: var(--color-main);
+  @apply dark:bg-[var(--color-primary)];
 }
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
