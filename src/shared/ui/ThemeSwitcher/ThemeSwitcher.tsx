@@ -5,7 +5,7 @@ import { type FC } from 'react';
 import { useThemeToggle } from '@/shared/hooks/useThemeToggle';
 import { THEMES } from '@/shared/config/constants';
 import { Button, Container } from '@/shared/ui/index';
-import { DarkThemeBackground, LightThemeBackground } from '../Icons/Icons';
+import { DarkThemeBackground, LightThemeBackground } from '@/shared/ui/Icons/Icons';
 
 export const ThemeSwitcher: FC = () => {
   const { theme, toggleTheme, mounted } = useThemeToggle();
