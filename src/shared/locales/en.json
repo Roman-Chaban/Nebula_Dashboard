@@ -8,11 +8,19 @@
     "signin": "Sign In"
   },
   "PAGE_HEADERS": {
-    "DASHBOARD": { "TITLE": "Main Dashboard", "SUBTITLE": "Pages / Dashboard" },
-    "MARKETPLACE": { "TITLE": "NFT Marketplace", "SUBTITLE": "Pages / NFT Marketplace" },
-    "TABLES": { "TITLE": "Tables", "SUBTITLE": "Pages / Tables" },
-    "KANBAN": { "TITLE": "Kanban", "SUBTITLE": "Pages / Kanban" },
-    "PROFILE": { "TITLE": "Profile", "SUBTITLE": "Pages / Profile" },
-    "DEFAULT": { "TITLE": "Default Title", "SUBTITLE": "Default Subtitle" }
+    "dashboard": { "title": "Main Dashboard", "subtitle": "Pages / Dashboard" },
+    "marketplace": { "title": "NFT Marketplace", "subtitle": "Pages / NFT Marketplace" },
+    "tables": { "title": "Tables", "subtitle": "Pages / Tables" },
+    "kanban": { "title": "Kanban", "subtitle": "Pages / Kanban" },
+    "profile": { "title": "Profile", "subtitle": "Pages / Profile" },
+    "default": { "title": "Default Title", "subtitle": "Default Subtitle" }
+  },
+  "UPSELL_CARD": {
+    "title": "Upgrade to PRO",
+    "primary_subtitle": "to get access to all features!",
+    "secondary_subtitle": "Connect with Venus World!"
+  },
+  "HEADER": {
+    "input_placeholder": "Search"
   }
 }

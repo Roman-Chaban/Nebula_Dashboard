@@ -21,7 +21,7 @@ export const sidebarNavItems: NavItems = [
 ];
 
 export const upsellCardInfo: UpsellCardInfo = {
-  title: 'Upgrade to PRO',
-  primarySubtitle: 'to get access to all features! ',
-  secondarySubtitle: 'Connect with Venus World!',
+  title: 'UPSELL_CARD.title',
+  primarySubtitle: 'UPSELL_CARD.primary_subtitle',
+  secondarySubtitle: 'UPSELL_CARD.secondary_subtitle',
 };

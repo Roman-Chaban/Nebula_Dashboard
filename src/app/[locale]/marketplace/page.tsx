@@ -1,5 +1,4 @@
-import { Container } from '@/shared/ui/Container/Container';
-import { PageLayout } from '@/shared/ui/PageLayout/PageLayout';
+import { Container, PageLayout } from '@/shared/ui/index';
 
 export default function MarketplacePage() {
   return (
