@@ -22,5 +22,12 @@
   },
   "HEADER": {
     "input_placeholder": "Пошук"
+  },
+  "SEO": {
+    "dashboard": {
+      "title": "Nebula | Панель",
+      "description": "Сторінка панелі, що показує ваші доходи та показники.",
+      "keywords": ["панель", "дохід", "аналітика", "Nebula"]
+    }
   }
 }
