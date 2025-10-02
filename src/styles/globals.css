@@ -19,11 +19,16 @@
   --color-light-blue: #868cff;
   --color-linear-background: linear-gradient(135deg, #868cff 0%, #4318ff 100%);
   --color-linear-blue-background: linear-gradient(90deg, #4481eb 0%, #04befe 100%);
+  --color-light-yellow: linear-gradient(145deg, #fff7c0, #f0d800);
+  --color-dark-brown: linear-gradient(145deg, #4b3f3c, #706e69);
 
   --leading-medium: 124%;
   --leading-extra: 171%;
 }
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 body {
   background: var(--color-main);
+  @apply dark:bg-[var(--color-primary)];
 }

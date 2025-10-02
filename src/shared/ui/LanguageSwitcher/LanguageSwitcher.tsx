@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useEffect, useState } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { LOCALES, type Locale, SUPPORTED_LOCALES } from '@/shared/config/constants';
 import i18n from '@/shared/i18n';
@@ -28,7 +28,7 @@ export const LanguageSwitcher: FC = () => {
   };
 
   return (
-    <Container className="relative inline-flex h-10 w-40 rounded-full bg-[var(--color-light-icon)] p-1 select-none">
+    <Container className="relative inline-flex h-8 w-40 rounded-full bg-[var(--color-light-icon)] p-1 select-none">
       <Container
         className={`absolute top-0 left-0 h-full w-[50%] rounded-full bg-[var(--color-primary)] transition-transform duration-300 ${
           currentLocale === LOCALES.UA ? 'translate-x-full' : 'translate-x-0'

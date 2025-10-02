@@ -8,7 +8,12 @@ export const SidebarLogo: FC = () => {
       htmlTag="div"
       className="flex h-max w-full items-center justify-center border-b-2 border-solid border-[var(--color-light-white)]"
     >
-      <HorizonLogo width="181" height="26" fill="var(--color-primary)" className="mt-14 mb-12" />
+      <HorizonLogo
+        width="181"
+        height="26"
+        fill="currentColor"
+        className="mt-14 mb-12 text-[var(--color-primary)] dark:text-[var(--color-white)]"
+      />
     </Container>
   );
 };

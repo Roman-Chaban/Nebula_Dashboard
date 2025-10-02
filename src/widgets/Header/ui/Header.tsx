@@ -2,7 +2,7 @@ import { type FC } from 'react';
 import { HeaderProps } from '@/widgets/Header/model/types';
 import { HeaderInfo } from '@/widgets/Header/ui/HeaderInfo';
 import { HeaderInput } from '@/widgets/Header/ui/HeaderInput';
-import { Container, LanguageSwitcher } from '@/shared/ui/index';
+import { Container, LanguageSwitcher, ThemeSwitcher } from '@/shared/ui/index';
 import { HeaderInputRightSide } from './HeaderInputRightSide';
 
 export const Header: FC<HeaderProps> = ({ title, subtitle }) => {
@@ -13,6 +13,7 @@ export const Header: FC<HeaderProps> = ({ title, subtitle }) => {
         <HeaderInput>
           <HeaderInputRightSide />
           <LanguageSwitcher />
+          <ThemeSwitcher />
         </HeaderInput>
       </Container>
     </header>
