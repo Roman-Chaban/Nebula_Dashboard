@@ -15,10 +15,10 @@ export const SidebarNavItem: FC<SidebarNavItemProps> = ({ item }) => {
 
   const isActive = pathname ? pathname.startsWith(href) : false;
 
-  const iconClass = `flex-shrink-0 ${isActive ? 'text-[var(--color-deep-blue)]' : 'text-[var(--color-light-icon)]'}`;
+  const iconClass = `flex-shrink-0 ${isActive ? 'text-[var(--color-deep-blue)]' : 'text-[var(--color-light-icon)]'} dark:text-[var(--color-white)]`;
 
   const isActiveDecoration = isActive
-    ? "after:absolute after:right-0 after:h-full after:rounded-[25px] after:w-1 after:bg-[var(--color-deep-blue)] after:content-['']"
+    ? "after:absolute after:right-0 after:h-full after:rounded-[25px] after:w-1 after:bg-[var(--color-deep-blue)] dark:after:bg-[var(--color-white)] after:content-[''] "
     : '';
 
   return (
@@ -29,7 +29,7 @@ export const SidebarNavItem: FC<SidebarNavItemProps> = ({ item }) => {
       {React.cloneElement(icon, { className: iconClass })}
       <Link
         href={href}
-        className={`font-bold ${isActive ? 'text-[var(--color-primary)]' : 'text-[var(--color-light-icon)]'}`}
+        className={`font-bold ${isActive ? 'text-[var(--color-primary)]' : 'text-[var(--color-light-icon)]'} dark:text-[var(--color-white)]`}
       >
         {t(label)}
       </Link>
