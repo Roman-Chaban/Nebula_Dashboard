@@ -2,12 +2,16 @@ import { type Metadata } from 'next';
 
 import { Container, PageLayout } from '@/shared/ui/index';
 import { Earnings } from '@/widgets/Earnings/ui/Earnings';
+import { Locale, SEO_KEYS } from '@/shared/config/constants';
+import { generateSeoMetadata } from '@/shared/seo/seo';
 
-export const metadata: Metadata = {
-  title: 'Nebula | Dashboard Page',
-  description: 'Dashboard page showing your earnings and performance metrics.',
-  keywords: ['dashboard', 'earnings', 'analytics', 'Nebula'],
+export type DashboardProps = {
+  params: { locale: Locale };
 };
+
+export async function generateMetadata({ params }: DashboardProps): Promise<Metadata> {
+  return generateSeoMetadata(params.locale, SEO_KEYS.DASHBOARD);
+}
 
 export default function DashboardPage() {
   return (
