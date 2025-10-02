@@ -37,7 +37,7 @@ export const PageLayout: FC<PageLayoutProps> = ({ children }) => {
   };
 
   return (
-    <Container className="flex w-full flex-col gap-[29px] pt-12 pr-[22px] pb-7 pl-[30px]">
+    <Container className="flex w-full flex-col gap-[29px] pt-12 pr-[22px] pb-7 pl-[20px]">
       <Header title={t(headers.titleKey)} subtitle={t(headers.subtitleKey)} />
       <main>{children}</main>
     </Container>

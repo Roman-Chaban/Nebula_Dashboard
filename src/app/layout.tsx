@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={dm_sans.className}>
-        <Container className="flex">
+        <Container className="mx-auto flex w-full max-w-[1920px]">
           <Sidebar />
           {children}
         </Container>
