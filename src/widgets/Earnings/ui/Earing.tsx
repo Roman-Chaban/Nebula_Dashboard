@@ -30,7 +30,7 @@ export const Earing: FC<EaringProps> = ({ earing }) => {
                   weight: '700',
                 }}
               >
-                {percent}
+                {percent}{' '}
               </Text>
             )}
             {restText}
