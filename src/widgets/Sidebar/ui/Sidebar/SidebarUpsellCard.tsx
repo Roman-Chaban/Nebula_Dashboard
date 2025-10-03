@@ -2,12 +2,11 @@
 
 import { type FC } from 'react';
 
-import { Container } from '@/shared/ui/Container/Container';
+import { Container, Text, Heading } from '@/shared/ui/index';
 import { UpsellCardIcon, UpsellCardMediumIcon } from '@/shared/ui/Icons/Icons';
 
 import { UpsellCardProps } from '@/widgets/Sidebar/model/types';
 import { useTranslation } from 'react-i18next';
-import { Heading } from '@/shared/ui/Heading/Heading';
 
 export const SidebarUpsellCard: FC<UpsellCardProps> = ({ upsellCardInfo }) => {
   const { t } = useTranslation();
@@ -33,10 +32,14 @@ export const SidebarUpsellCard: FC<UpsellCardProps> = ({ upsellCardInfo }) => {
         <Heading level={2} className="min-h-[28px] text-[16px] text-[var(--color-white)]">
           {t(upsellCardInfo.title)}
         </Heading>
-        {subtitles.map((subtitle, index) => (
-          <span key={index} className="text-center text-[14px] text-[var(--color-white)]">
+        {subtitles.map((subtitle) => (
+          <Text
+            properties={{ size: 'md', color: 'text-[var(--color-white)]' }}
+            key={subtitle}
+            className="text-center"
+          >
             {t(subtitle)}
-          </span>
+          </Text>
         ))}
       </Container>
     </Container>
