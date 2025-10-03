@@ -1,4 +1,5 @@
 import { type FC } from 'react';
+
 import { headerInputRightSideItems } from '@/widgets/Header/model/config';
 import { Button, Container } from '@/shared/ui/index';
 
