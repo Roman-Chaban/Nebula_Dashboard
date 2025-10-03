@@ -20,6 +20,7 @@
   --color-linear-background: linear-gradient(135deg, #868cff 0%, #4318ff 100%);
   --color-linear-blue-background: linear-gradient(90deg, #4481eb 0%, #04befe 100%);
 
+  /* Leading (line-height) */
   --leading-medium: 124%;
   --leading-extra: 171%;
 }
