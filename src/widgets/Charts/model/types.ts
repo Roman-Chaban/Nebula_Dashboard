@@ -17,3 +17,18 @@ export type ChartHeaderProps = {
   title?: string;
   extraBlock?: ChartHeaderExtraBlock;
 };
+
+export type MonthChartInformationTrackItem = {
+  title: string;
+  icon: ReactNode;
+};
+
+export type MonthChartInformationItem = {
+  id: number;
+  primaryTitle: string;
+  primarySubtitle: string;
+  perecent: string;
+  trackItem: MonthChartInformationTrackItem;
+};
+
+export type MonthChartInformationItems = MonthChartInformationItem[];
