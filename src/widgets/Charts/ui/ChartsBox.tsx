@@ -5,7 +5,7 @@ import { ChartsBoxProps } from '@/widgets/Charts/model/types';
 export const ChartsBox: FC<ChartsBoxProps> = ({ children, paddingClass }) => {
   return (
     <Container
-      className={`min-h-[345px] max-w-[796px] rounded-[20px] bg-[var(--color-white)] ${paddingClass ?? ''} `}
+      className={`flex min-h-[345px] max-w-[796px] flex-col rounded-[20px] bg-[var(--color-white)] ${paddingClass ?? ''} `}
       width={'100%'}
       height={'100%'}
     >
