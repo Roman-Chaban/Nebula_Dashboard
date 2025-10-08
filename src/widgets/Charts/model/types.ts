@@ -7,6 +7,13 @@ export type ChartsBoxProps = {
   paddingClass?: string;
 };
 
+export type ChartHeaderExtraBlock = {
+  label: string;
+  icon?: ReactNode;
+};
+
 export type ChartHeaderProps = {
   children?: ReactNode;
+  title?: string;
+  extraBlock?: ChartHeaderExtraBlock;
 };
