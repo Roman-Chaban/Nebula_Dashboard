@@ -6,6 +6,7 @@
   --color-white: #ffffff;
   --color-primary: #2b3674;
   --color-secondary: #707eae;
+  --color-tertiary: #1b2559;
   /* Secondary Colors */
   --color-light-green: #05cd99;
   --color-light-white: #f4f7fe;
@@ -21,6 +22,7 @@
   --color-linear-blue-background: linear-gradient(90deg, #4481eb 0%, #04befe 100%);
 
   /* Leading (line-height) */
+  --leading-base: 100%;
   --leading-medium: 124%;
   --leading-extra: 171%;
 }
