@@ -334,8 +334,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-<div align="center">
-
 **⭐ Star this repository if it helped you!**
 
 [Report Bug](https://github.com/Roman-Chaban/Nebula_Dashboard/issues) • [Request Feature](https://github.com/Roman-Chaban/Nebula_Dashboard/issues) • [Documentation](https://github.com/Roman-Chaban/Nebula_Dashboard/wiki)
