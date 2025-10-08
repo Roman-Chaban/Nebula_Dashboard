@@ -6,3 +6,7 @@ export type ChartsBoxProps = {
   children?: ReactNode;
   paddingClass?: string;
 };
+
+export type ChartHeaderProps = {
+  children?: ReactNode;
+};
