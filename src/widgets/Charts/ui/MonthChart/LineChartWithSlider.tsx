@@ -31,12 +31,12 @@ export default function LineChartWithSlider() {
   const {
     selectedIndex,
     isDragging,
+    knob,
+    knobValue,
     onPointerDown,
     onPointerMove,
     onPointerUp,
     onKeyDown,
-    knob,
-    knobValue,
   } = useChartKnob({
     primarySeriesPoints,
     primaryDataSeries: PRIMARY_DATA_SERIES,
@@ -44,7 +44,7 @@ export default function LineChartWithSlider() {
   });
 
   return (
-    <div ref={containerRef} className="w-full">
+    <Container htmlTag="div" ref={containerRef} className="w-full">
       <Container htmlTag="div">
         <Container htmlTag="div" className="relative">
           <ChartSvg
@@ -67,6 +67,6 @@ export default function LineChartWithSlider() {
           <ChartTooltip knob={knob} value={knobValue} />
         </Container>
       </Container>
-    </div>
+    </Container>
   );
 }
