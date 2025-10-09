@@ -13,7 +13,7 @@ export const ChartHeader: FC<ChartHeaderProps> = ({ title, extraBlock }) => {
         <Container className="flex min-h-[37px] w-full max-w-[133px] flex-row-reverse items-center justify-center gap-1.5 rounded-[7px] bg-[var(--color-main)]">
           <Heading
             level={4}
-            className="text-[var(--color-light-icon)] leading-extra text-[14px] font-medium"
+            className="leading-extra text-[14px] font-medium text-[var(--color-light-icon)]"
           >
             {label}
           </Heading>{' '}
