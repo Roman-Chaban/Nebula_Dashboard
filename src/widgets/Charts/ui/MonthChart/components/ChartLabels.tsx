@@ -11,7 +11,7 @@ export const ChartLabels: FC<ChartLabelsProps> = ({ points, labels, height }) =>
         y={height - 12}
         textAnchor="middle"
         className="text-xs"
-        style={{ fontSize: 13, fill: '#94A3B8' }}
+        style={{ fontSize: 13, fill: 'var(--color-chart-label)' }}
         aria-hidden
       >
         {labels[index]}
