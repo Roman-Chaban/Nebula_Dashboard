@@ -37,11 +37,16 @@ export const ChartSvg: FC<ChartSvgProps> = ({
   >
     <ChartDefs />
 
-    <ChartPath path={secondarySeriesPath} stroke="#7EE0FF" strokeWidth={6} strokeOpacity={0.35} />
+    <ChartPath
+      path={secondarySeriesPath}
+      stroke="var(--color-chart-path)"
+      strokeWidth={6}
+      strokeOpacity={0.35}
+    />
 
     <ChartPath
       path={primarySeriesPath}
-      stroke="#5B22FF"
+      stroke="var(--color-chart-blue)"
       strokeWidth={5}
       filter="url(#softShadow)"
     />
