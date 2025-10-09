@@ -25,12 +25,12 @@ export const ChartKnob: FC<ChartKnobProps> = ({
       aria-label={ariaLabel}
       style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
     >
-      <circle r={18} fill="#ffffff00" />
+      <circle r={18} fill="var(--color-chart-natural)" />
     </g>
 
     <g transform={`translate(${knob.x}, ${knob.y})`} pointerEvents="none">
-      <circle r={9} fill="#FFFFFF" stroke="#5B22FF" strokeWidth={3} />
-      <circle r={4} fill="#5B22FF" />
+      <circle r={9} fill="var(--color-white)" stroke="var(--color-chart-blue)" strokeWidth={3} />
+      <circle r={4} fill="var(--color-chart-blue)" />
     </g>
   </>
 );
