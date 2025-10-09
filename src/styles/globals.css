@@ -13,13 +13,20 @@
   --color-deep-blue: #4318ff;
   --color-input-base: #8f9bba;
 
-  /* Icons colors */
+  /* Icons Colors */
   --color-light-icon: #a3aed0;
 
   /* Linear Colors */
   --color-light-blue: #868cff;
   --color-linear-background: linear-gradient(135deg, #868cff 0%, #4318ff 100%);
   --color-linear-blue-background: linear-gradient(90deg, #4481eb 0%, #04befe 100%);
+
+  /* Chart Colors */
+  --color-chart-blue: #5b22ff;
+  --color-chart-blue-secondary: #4C1DFF;
+  --color-chart-natural: #ffffff00;
+  --color-chart-label: #94a3b8;
+  --color-chart-path: #7ee0ff;
 
   /* Leading (line-height) */
   --leading-base: 100%;
