@@ -14,11 +14,15 @@ export const ChartTooltip: FC<ChartTooltipProps> = ({ knob, value }) => (
       top: `${knob.y - 28}px`,
     }}
   >
-    <div className="inline-flex items-center justify-center rounded-lg bg-[#4C1DFF] px-3 py-1 text-sm font-semibold text-white shadow-md">
+    <Container
+      htmlTag="div"
+      className="inline-flex items-center justify-center rounded-lg bg-[var(--color-chart-blue-secondary)] px-3 py-1 text-sm font-semibold text-[var(--color-white)] shadow-md"
+    >
       ${value}.00
-    </div>
-    <div
-      className="mx-auto mt-1 h-3 w-3 rounded-full bg-white"
+    </Container>
+    <Container
+      htmlTag="div"
+      className="mx-auto mt-1 h-3 w-3 rounded-full bg-[var(--color-white)]"
       style={{ transform: 'translateY(-6px)' }}
     />
   </Container>
