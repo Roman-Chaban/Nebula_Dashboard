@@ -14,9 +14,10 @@ import { useChartKnob } from '@/widgets/Charts/ui/MonthChart/hooks/useChartKnob'
 import { ChartSvg, ChartTooltip } from '@/widgets/Charts/ui/MonthChart/components/index';
 
 import { Container } from '@/shared/ui';
+import { useRef } from 'react';
 
 export default function LineChartWithSlider() {
-  const { containerRef, clientXToIndex } = useChartInteractions([]);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const width = useContainerWidth(containerRef, 340);
   const height = CHART_CONFIG.svg.height;
@@ -27,6 +28,8 @@ export default function LineChartWithSlider() {
     width,
     height,
   );
+
+  const { clientXToIndex } = useChartInteractions(containerRef, primarySeriesPoints);
 
   const {
     selectedIndex,
@@ -44,7 +47,7 @@ export default function LineChartWithSlider() {
   });
 
   return (
-    <Container htmlTag="div" ref={containerRef} className="w-full">
+    <div ref={containerRef} className="w-full">
       <Container htmlTag="div">
         <Container htmlTag="div" className="relative">
           <ChartSvg
@@ -67,6 +70,6 @@ export default function LineChartWithSlider() {
           <ChartTooltip knob={knob} value={knobValue} />
         </Container>
       </Container>
-    </Container>
+    </div>
   );
 }
