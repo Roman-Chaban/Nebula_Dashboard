@@ -1,9 +1,10 @@
-import { useCallback, useRef } from 'react';
+import { useCallback } from 'react';
 import type { Point } from '@/widgets/Charts/model/types';
 
-export const useChartInteractions = (primarySeriesPoints: Point[]) => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-
+export const useChartInteractions = (
+  containerRef: React.RefObject<HTMLElement | null>,
+  primarySeriesPoints: Point[],
+) => {
   const clientXToIndex = useCallback(
     (clientX: number) => {
       if (!containerRef.current) return 0;
@@ -13,6 +14,7 @@ export const useChartInteractions = (primarySeriesPoints: Point[]) => {
       const x = clientX - rect.left;
       let best = 0;
       let bestDist = Infinity;
+      if (!primarySeriesPoints || primarySeriesPoints.length === 0) return 0;
       primarySeriesPoints.forEach((p, i) => {
         const d = Math.abs(p.x - x);
         if (d < bestDist) {
@@ -22,7 +24,7 @@ export const useChartInteractions = (primarySeriesPoints: Point[]) => {
       });
       return best;
     },
-    [primarySeriesPoints],
+    [containerRef, primarySeriesPoints],
   );
 
   return {
