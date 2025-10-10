@@ -26,6 +26,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       rightIcon,
       fullWidth = false,
       onClick,
+      icon,
       ...rest
     },
     ref,
@@ -73,6 +74,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             </span>
           )
         )}
+
+        {icon}
 
         <span className={classNames?.label}>{children}</span>
 

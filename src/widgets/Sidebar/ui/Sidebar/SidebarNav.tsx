@@ -4,14 +4,14 @@ import { type FC } from 'react';
 import { List } from '@/shared/ui/List/List';
 import { SidebarNavItem } from '@/widgets/Sidebar/ui/Sidebar/SidebarNavItem';
 import { SidebarNavProps } from '@/widgets/Sidebar/model/types';
-import { useSidebarNavItems } from '@/shared/hooks/useSidebarNavItems';
+import { useSidebarMenu } from '@/shared/hooks/useSidebarMenu';
 
 export const SidebarNav: FC<SidebarNavProps> = ({
   LinkView = (_item, children) => children,
   className = 'flex flex-col gap-5 pt-[38px] pl-8',
   itemClassName = 'flex items-center gap-3 min-h-[36px]',
 }) => {
-  const navItems = useSidebarNavItems();
+  const { navItems } = useSidebarMenu();
 
   return (
     <nav className="grow overflow-y-auto">

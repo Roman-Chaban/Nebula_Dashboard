@@ -1,9 +1,9 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 export type ButtonTypes = 'button' | 'submit' | 'reset';
-export type ButtonVariant = 'solid' | 'outline' | 'ghost' | 'link';
+export type ButtonVariant = 'base' | 'solid' | 'outline' | 'ghost' | 'link';
 export type ButtonSize = 'sm' | 'md' | 'lg';
-export type ButtonTone = 'neutral' | 'primary' | 'success' | 'warning' | 'danger';
+export type ButtonTone = 'base' | 'neutral' | 'primary' | 'success' | 'warning' | 'danger';
 
 export type ButtonClassNames = {
   button?: string;
@@ -29,4 +29,5 @@ export type ButtonProps = BaseButtonProps & {
   variant?: ButtonVariant;
   size?: ButtonSize;
   tone?: ButtonTone;
+  icon?: ReactNode;
 };
