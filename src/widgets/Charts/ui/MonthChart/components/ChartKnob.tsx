@@ -1,6 +1,5 @@
+import { ChartKnobProps } from '@/widgets/Charts/model/types';
 import { type FC } from 'react';
-
-import type { ChartKnobProps } from '@/widgets/Charts/model/types';
 
 export const ChartKnob: FC<ChartKnobProps> = ({
   knob,
@@ -19,12 +18,15 @@ export const ChartKnob: FC<ChartKnobProps> = ({
       tabIndex={0}
       onKeyDown={onKeyDown}
       role="slider"
-      aria-valuemin={ariaValueMin}
-      aria-valuemax={ariaValueMax}
-      aria-valuenow={ariaValueNow}
+      data-valuemin={ariaValueMin}
+      data-valuemax={ariaValueMax}
+      data-valuenow={ariaValueNow}
       aria-label={ariaLabel}
-      style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+      style={{ cursor: isDragging ? 'grabbing' : 'grab', outline: 'none' }}
+      pointerEvents="all"
+      className="focus:outline-none focus-visible:outline-none"
     >
+      <circle r={24} fill="transparent" />
       <circle r={18} fill="var(--color-chart-natural)" />
     </g>
 
