@@ -5,20 +5,21 @@ export const useKnob = (
   count: number,
   clientXToIndex: (x: number) => number,
 ) => {
-  const [selectedIndex, setSelectedIndex] = useState<number>(initialIndex);
+  const [selectedIndex, setSelectedIndex] = useState<number>(() =>
+    Math.min(Math.max(0, initialIndex), Math.max(0, count - 1)),
+  );
   const [isDragging, setIsDragging] = useState(false);
   const activePointerId = useRef<number | null>(null);
 
   const onPointerDown = useCallback(
     (event: React.PointerEvent) => {
       try {
-        (event.target as Element).setPointerCapture(event.pointerId);
+        (event.currentTarget as Element).setPointerCapture(event.pointerId);
       } catch {}
       activePointerId.current = event.pointerId;
       setIsDragging(true);
       const idx = clientXToIndex(event.clientX);
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      setSelectedIndex((_) => Math.min(Math.max(0, idx), count - 1));
+      setSelectedIndex(() => Math.min(Math.max(0, idx), Math.max(0, count - 1)));
     },
     [clientXToIndex, count],
   );
@@ -27,15 +28,14 @@ export const useKnob = (
     (e: React.PointerEvent) => {
       if (!isDragging) return;
       const idx = clientXToIndex(e.clientX);
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      setSelectedIndex((_) => Math.min(Math.max(0, idx), count - 1));
+      setSelectedIndex(() => Math.min(Math.max(0, idx), Math.max(0, count - 1)));
     },
     [isDragging, clientXToIndex, count],
   );
 
   const onPointerUp = useCallback((e: React.PointerEvent) => {
     try {
-      (e.target as Element).releasePointerCapture(e.pointerId);
+      (e.currentTarget as Element).releasePointerCapture(e.pointerId);
     } catch {}
     activePointerId.current = null;
     setIsDragging(false);
