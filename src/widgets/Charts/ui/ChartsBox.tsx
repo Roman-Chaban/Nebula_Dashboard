@@ -1,4 +1,5 @@
 import { type FC } from 'react';
+
 import { Container } from '@/shared/ui';
 import { ChartsBoxProps } from '@/widgets/Charts/model/types';
 
