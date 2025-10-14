@@ -2,10 +2,10 @@ import { ChartKnobProps } from '@/widgets/Charts/model/types';
 import { type FC } from 'react';
 
 export const ChartKnob: FC<ChartKnobProps> = ({
-  knob,
-  isDragging,
   onPointerDown,
   onKeyDown,
+  knob,
+  isDragging,
   ariaValueMin,
   ariaValueMax,
   ariaValueNow,
