@@ -5,7 +5,10 @@ import { MonthChart, WeeklyChart } from '@/widgets/Charts/index';
 
 export const Charts: FC<ChartsProps> = ({ children }) => {
   return (
-    <Container htmlTag="section" className="flex items-center justify-between gap-5">
+    <Container
+      htmlTag="section"
+      className="flex w-full items-center justify-between gap-5 max-[1360px]:flex-wrap"
+    >
       <MonthChart />
       <WeeklyChart />
       {children}
