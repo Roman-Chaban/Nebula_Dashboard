@@ -19,14 +19,14 @@ import { useRef } from 'react';
 export default function LineChartWithSlider() {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const width = useContainerWidth(containerRef, 340);
-  const height = CHART_CONFIG.svg.height;
+  const WIDTH = useContainerWidth(containerRef, 340);
+  const HEIGHT = CHART_CONFIG.svg.height;
 
   const { primarySeriesPoints, primarySeriesPath, secondarySeriesPath } = useChartData(
     PRIMARY_DATA_SERIES,
     SECONDARY_DATA_SERIES,
-    width,
-    height,
+    WIDTH,
+    HEIGHT,
   );
 
   const { clientXToIndex } = useChartInteractions(containerRef, primarySeriesPoints);
@@ -51,8 +51,8 @@ export default function LineChartWithSlider() {
       <Container htmlTag="div">
         <Container htmlTag="div" className="relative">
           <ChartSvg
-            width={width}
-            height={height}
+            width={WIDTH}
+            height={HEIGHT}
             primarySeriesPath={primarySeriesPath}
             secondarySeriesPath={secondarySeriesPath}
             primarySeriesPoints={primarySeriesPoints}
@@ -66,7 +66,6 @@ export default function LineChartWithSlider() {
             onPointerDown={onPointerDown}
             onKeyDown={onKeyDown}
           />
-
           <ChartTooltip knob={knob} value={knobValue} />
         </Container>
       </Container>
