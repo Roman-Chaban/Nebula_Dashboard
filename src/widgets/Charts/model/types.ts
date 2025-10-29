@@ -92,3 +92,28 @@ export type ChartPathProps = {
   strokeOpacity?: number;
   filter?: string;
 };
+
+export type Segment = {
+  value: number;
+  color: string;
+  label?: string;
+};
+
+export type DayData = {
+  day: number | string;
+  segments: Segment[];
+};
+
+export type DaysData = DayData[];
+
+export type WeeklyThumbsProps = {
+  columnWidth?: number;
+  segmentHeight?: number;
+  segmentGap?: number;
+  gap?: number;
+  paddingX?: number;
+  topPadding?: number;
+  bottomMargin?: number;
+  chartHeight?: number;
+  fontSize?: number;
+};
