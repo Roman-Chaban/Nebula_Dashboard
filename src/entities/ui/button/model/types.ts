@@ -21,7 +21,7 @@ export type BaseButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'typ
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
   loading?: boolean;
-  fullWidth: boolean;
+  fullWidth?: boolean;
   disabled?: boolean;
 };
 

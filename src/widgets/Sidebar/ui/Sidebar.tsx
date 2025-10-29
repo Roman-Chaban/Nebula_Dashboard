@@ -9,7 +9,7 @@ const Sidebar: FC = () => {
       htmlTag="aside"
       width="100%"
       height="100%"
-      className="flex min-h-screen max-w-72 flex-col bg-white"
+      className="flex min-h-screen max-w-72 flex-col bg-white dark:border-r-2 dark:border-[var(--color-white)] dark:bg-[var(--color-primary)]"
     >
       <SidebarLogo />
       <SidebarNav sidebarNavItems={sidebarNavItems} />

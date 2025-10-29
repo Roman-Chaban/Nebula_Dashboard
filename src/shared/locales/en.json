@@ -28,6 +28,13 @@
     "WEEKLY_CHART": {
       "header_title": "Weekly Revenue",
       "extra_title": "This month"
+    },
+    "SEO": {
+      "dashboard": {
+        "title": "Nebula | Dashboard Page",
+        "description": "Dashboard page showing your earnings and performance metrics.",
+        "keywords": ["dashboard", "earnings", "analytics", "Nebula"]
+      }
     }
   }
 }

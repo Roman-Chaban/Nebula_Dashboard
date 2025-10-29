@@ -379,60 +379,202 @@ export const ProjectsIcon: FC = () => (
   </svg>
 );
 
-export const ChartIcon: FC = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clipPath="url(#clip0_201_2536)">
-      <path
-        d="M6.4 9.2H6.6C7.37 9.2 8 9.83 8 10.6V17.6C8 18.37 7.37 19 6.6 19H6.4C5.63 19 5 18.37 5 17.6V10.6C5 9.83 5.63 9.2 6.4 9.2ZM12 5C12.77 5 13.4 5.63 13.4 6.4V17.6C13.4 18.37 12.77 19 12 19C11.23 19 10.6 18.37 10.6 17.6V6.4C10.6 5.63 11.23 5 12 5ZM17.6 13C18.37 13 19 13.63 19 14.4V17.6C19 18.37 18.37 19 17.6 19C16.83 19 16.2 18.37 16.2 17.6V14.4C16.2 13.63 16.83 13 17.6 13Z"
-        fill="var(--color-deep-blue)"
-      />
+export const LightThemeBackground: FC<IconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="60"
+    height="60"
+    viewBox="0 0 379 156"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_ddii_3_2)">
+      <g clipPath="url(#clip0_3_2)">
+        <rect x="4" y="8" width="371" height="140" rx="70" fill="#1A65AB" />
+        <ellipse cx="80" cy="80.5" rx="93" ry="92.5" fill="white" fillOpacity="0.1" />
+        <ellipse cx="80" cy="80" rx="130" ry="123" fill="white" fillOpacity="0.1" />
+        <ellipse cx="85" cy="84" rx="164" ry="155" fill="white" fillOpacity="0.1" />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M377 9C377 25.6581 368.854 40.4136 356.328 49.5C368.854 58.5864 377 73.3419 377 90C377 117.614 354.614 140 327 140C318.053 140 309.656 137.65 302.39 133.534C298.068 155.588 281.625 172 262 172C259.99 172 258.013 171.828 256.079 171.495C247.264 179.277 235.683 184 223 184C216.387 184 210.074 182.716 204.296 180.384C195.343 188.826 183.276 194 170 194C160.686 194 151.966 191.453 144.5 187.018C137.034 191.453 128.314 194 119 194C102.002 194 86.9848 185.518 77.9507 172.555C68.7808 183.235 55.1804 190 40 190C12.3858 190 -10 167.614 -10 140C-10 112.386 12.3858 90 40 90C56.9982 90 72.0152 98.4822 81.0493 111.445C90.2192 100.765 103.82 94 119 94C128.314 94 137.034 96.5469 144.5 100.982C151.966 96.5469 160.686 94 170 94C176.613 94 182.926 95.2838 188.704 97.6159C197.657 89.1741 209.724 84 223 84C226.747 84 230.398 84.4123 233.91 85.1939C241.301 77.002 251.166 72 262 72C268.017 72 273.734 73.5426 278.895 76.3175C281.995 65.3971 288.714 55.9986 297.672 49.5C285.146 40.4136 277 25.6581 277 9C277 -18.6142 299.386 -41 327 -41C354.614 -41 377 -18.6142 377 9Z"
+          fill="white"
+          fillOpacity="0.6"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M427 9C427 25.9866 418.529 40.9947 405.582 50.0308C420.205 58.7558 430 74.7341 430 93C430 120.614 407.614 143 380 143C378.235 143 376.49 142.908 374.772 142.73C374.923 144.462 375 146.22 375 148C375 175.614 356.42 198 333.5 198C326.065 198 319.087 195.644 313.051 191.519C304.24 199.287 292.67 204 280 204C272.615 204 265.603 202.399 259.294 199.524C251.061 205.486 240.941 209 230 209C215.046 209 201.625 202.435 192.462 192.03C183.727 199.493 172.39 204 160 204C144.792 204 131.17 197.211 122 186.498C112.83 197.211 99.2077 204 84 204C56.3858 204 34 181.614 34 154C34 126.386 56.3858 104 84 104C99.2077 104 112.83 110.789 122 121.502C131.17 110.789 144.792 104 160 104C174.954 104 188.375 110.565 197.538 120.97C206.273 113.507 217.61 109 230 109C237.385 109 244.397 110.601 250.706 113.476C258.939 107.514 269.059 104 280 104C289.342 104 298.086 106.562 305.566 111.022C312.193 103.751 320.781 99.0315 330.262 98.1499C330.089 96.4569 330 94.7388 330 93C330 76.0134 338.471 61.0053 351.418 51.9692C336.795 43.2442 327 27.2659 327 9C327 -18.6142 349.386 -41 377 -41C404.614 -41 427 -18.6142 427 9Z"
+          fill="#EAFBFF"
+          fillOpacity="0.91"
+        />
+      </g>
     </g>
     <defs>
-      <clipPath id="clip0_201_2536">
-        <rect width="24" height="24" fill="white" />
+      <filter
+        id="filter0_ddii_3_2"
+        x="0"
+        y="0"
+        width="379"
+        height="156"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.62 0" />
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_2" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="-4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+        <feBlend mode="normal" in2="effect1_dropShadow_3_2" result="effect2_dropShadow_3_2" />
+        <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_3_2" result="shape" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="2" dy="6" />
+        <feGaussianBlur stdDeviation="5" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.29 0" />
+        <feBlend mode="normal" in2="shape" result="effect3_innerShadow_3_2" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="1" dy="-6" />
+        <feGaussianBlur stdDeviation="4.5" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+        <feBlend mode="normal" in2="effect3_innerShadow_3_2" result="effect4_innerShadow_3_2" />
+      </filter>
+      <clipPath id="clip0_3_2">
+        <rect x="4" y="8" width="371" height="140" rx="70" fill="white" />
       </clipPath>
     </defs>
   </svg>
 );
 
-export const CalendarIcon: FC = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clipPath="url(#clip0_201_2545)">
-      <path
-        d="M15 2.25H14.25V1.5C14.25 1.0875 13.9125 0.75 13.5 0.75C13.0875 0.75 12.75 1.0875 12.75 1.5V2.25H5.25V1.5C5.25 1.0875 4.9125 0.75 4.5 0.75C4.0875 0.75 3.75 1.0875 3.75 1.5V2.25H3C2.175 2.25 1.5 2.925 1.5 3.75V15.75C1.5 16.575 2.175 17.25 3 17.25H15C15.825 17.25 16.5 16.575 16.5 15.75V3.75C16.5 2.925 15.825 2.25 15 2.25ZM14.25 15.75H3.75C3.3375 15.75 3 15.4125 3 15V6H15V15C15 15.4125 14.6625 15.75 14.25 15.75Z"
-        fill="var(--color-light-icon)"
-      />
+export const DarkThemeBackground: FC<IconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="60"
+    height="60"
+    viewBox="0 0 377 161"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_ddii_3_129)">
+      <g clipPath="url(#clip0_3_129)">
+        <rect x="4" y="8" width="369" height="145" rx="72.5" fill="#464A4E" />
+        <path
+          d="M397 82C397 149.931 338.797 205 267 205C195.203 205 137 149.931 137 82C137 14.069 195.203 -41 267 -41C338.797 -41 397 14.069 397 82Z"
+          fill="white"
+          fillOpacity="0.1"
+        />
+        <ellipse cx="247" cy="94" rx="164" ry="155" fill="white" fillOpacity="0.1" />
+        <ellipse cx="284" cy="80.5" rx="93" ry="92.5" fill="white" fillOpacity="0.1" />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M377 9C377 25.6581 368.854 40.4136 356.328 49.5C368.854 58.5864 377 73.3419 377 90C377 117.614 354.614 140 327 140C318.053 140 309.656 137.65 302.39 133.534C298.068 155.588 281.625 172 262 172C259.99 172 258.013 171.828 256.079 171.495C247.264 179.277 235.683 184 223 184C216.387 184 210.074 182.716 204.296 180.384C195.343 188.826 183.276 194 170 194C160.686 194 151.966 191.453 144.5 187.018C137.034 191.453 128.314 194 119 194C102.002 194 86.9848 185.518 77.9507 172.555C68.7808 183.235 55.1804 190 40 190C12.3858 190 -10 167.614 -10 140C-10 112.386 12.3858 90 40 90C56.9982 90 72.0152 98.4822 81.0493 111.445C90.2192 100.765 103.82 94 119 94C128.314 94 137.034 96.5469 144.5 100.982C151.966 96.5469 160.686 94 170 94C176.613 94 182.926 95.2838 188.704 97.6159C197.657 89.1741 209.724 84 223 84C226.747 84 230.398 84.4123 233.91 85.1939C241.301 77.002 251.166 72 262 72C268.017 72 273.734 73.5426 278.895 76.3175C281.995 65.3971 288.714 55.9986 297.672 49.5C285.146 40.4136 277 25.6581 277 9C277 -18.6142 299.386 -41 327 -41C354.614 -41 377 -18.6142 377 9Z"
+          fill="white"
+          fillOpacity="0.6"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M408 19C408 35.9866 399.529 50.9947 386.582 60.0308C401.205 68.7558 411 84.7341 411 103C411 130.614 388.614 153 361 153C359.235 153 357.49 152.908 355.772 152.73C355.923 154.462 356 156.22 356 158C356 185.614 337.42 208 314.5 208C307.065 208 300.087 205.644 294.051 201.519C285.24 209.287 273.67 214 261 214C253.615 214 246.603 212.399 240.294 209.524C232.061 215.486 221.941 219 211 219C196.046 219 182.625 212.435 173.462 202.03C164.727 209.493 153.39 214 141 214C125.792 214 112.17 207.211 103 196.498C93.8296 207.211 80.2077 214 65 214C37.3858 214 15 191.614 15 164C15 136.386 37.3858 114 65 114C80.2077 114 93.8296 120.789 103 131.502C112.17 120.789 125.792 114 141 114C155.954 114 169.375 120.565 178.538 130.97C187.273 123.507 198.61 119 211 119C218.385 119 225.397 120.601 231.706 123.476C239.939 117.514 250.059 114 261 114C270.342 114 279.086 116.562 286.566 121.022C293.193 113.751 301.781 109.031 311.262 108.15C311.089 106.457 311 104.739 311 103C311 86.0134 319.471 71.0053 332.418 61.9692C317.795 53.2442 308 37.2659 308 19C308 -8.61424 330.386 -31 358 -31C385.614 -31 408 -8.61424 408 19Z"
+          fill="#EAFBFF"
+          fillOpacity="0.91"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M150 26L152.919 37.7467H162.364L154.723 45.0066L157.641 56.7533L150 49.4934L142.359 56.7533L145.277 45.0066L137.636 37.7467H147.081L150 26ZM72.9187 54.7467L70 43L67.0813 54.7467H57.6363L65.2775 62.0066L62.3588 73.7533L70 66.4934L77.6412 73.7533L74.7225 62.0066L82.3637 54.7467H72.9187ZM112.919 71.7467L110 60L107.081 71.7467H97.6363L105.277 79.0066L102.359 90.7533L110 83.4934L117.641 90.7533L114.723 79.0066L122.364 71.7467H112.919ZM217.919 37.7467L215 26L212.081 37.7467H202.636L210.277 45.0066L207.359 56.7533L215 49.4934L222.641 56.7533L219.723 45.0066L227.364 37.7467H217.919Z"
+          fill="#D7D7D7"
+        />
+      </g>
     </g>
     <defs>
-      <clipPath id="clip0_201_2545">
-        <rect width="18" height="18" fill="white" />
+      <filter
+        id="filter0_ddii_3_129"
+        x="0"
+        y="0"
+        width="377"
+        height="161"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.62 0" />
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_129" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="-4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+        <feBlend mode="normal" in2="effect1_dropShadow_3_129" result="effect2_dropShadow_3_129" />
+        <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_3_129" result="shape" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="2" dy="6" />
+        <feGaussianBlur stdDeviation="5" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.29 0" />
+        <feBlend mode="normal" in2="shape" result="effect3_innerShadow_3_129" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="1" dy="-6" />
+        <feGaussianBlur stdDeviation="4.5" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+        <feBlend mode="normal" in2="effect3_innerShadow_3_129" result="effect4_innerShadow_3_129" />
+      </filter>
+      <clipPath id="clip0_3_129">
+        <rect x="4" y="8" width="369" height="145" rx="72.5" fill="white" />
       </clipPath>
     </defs>
-  </svg>
-);
-
-export const DoneTrackIcon: FC = () => (
-  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0.304199" y="0.757202" width="16" height="16" rx="8" fill="var(--color-light-green)" />
-    <g clipPath="url(#clip0_201_1861)">
-      <path
-        d="M7.12501 10.5059L5.52085 8.90178C5.3421 8.72303 5.05793 8.72303 4.87918 8.90178C4.70043 9.08053 4.70043 9.36469 4.87918 9.54344L6.7996 11.4639C6.97835 11.6426 7.2671 11.6426 7.44585 11.4639L12.3042 6.61011C12.4829 6.43136 12.4829 6.14719 12.3042 5.96844C12.1254 5.78969 11.8413 5.78969 11.6625 5.96844L7.12501 10.5059Z"
-        fill="white"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_201_1861">
-        <rect width="11" height="11" fill="white" transform="translate(3 3.08093)" />
-      </clipPath>
-    </defs>
-  </svg>
-);
-
-export const TriangleIcon: FC = () => (
-  <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M0.869629 4.35119L5.06217 0.61203L9.25472 4.35119H0.869629Z"
-      fill="var(--color-light-green)"
-    />
   </svg>
 );

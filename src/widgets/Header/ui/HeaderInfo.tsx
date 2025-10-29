@@ -14,7 +14,7 @@ export const HeaderInfo: FC<HeaderInfoProps> = ({ title, subtitle }) => {
       </Text>
       <Heading
         level={1}
-        className="text-primary leading-medium text-[34px] font-bold tracking-[-0.02em]"
+        className="text-primary leading-medium text-[34px] font-bold tracking-[-0.02em] dark:text-[var(--color-white)]"
       >
         {title}
       </Heading>
