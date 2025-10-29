@@ -23,10 +23,12 @@
 
   /* Chart Colors */
   --color-chart-blue: #5b22ff;
-  --color-chart-blue-secondary: #4C1DFF;
+  --color-chart-blue-secondary: #4c1dff;
   --color-chart-natural: #ffffff00;
   --color-chart-label: #94a3b8;
   --color-chart-path: #7ee0ff;
+  --color-chart-primary: #eff4fb;
+  --color-chart-secondary: #6ad2ff;
 
   /* Leading (line-height) */
   --leading-base: 100%;
