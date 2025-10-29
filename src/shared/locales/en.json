@@ -22,5 +22,12 @@
   },
   "HEADER": {
     "input_placeholder": "Search"
+  },
+  "CHARTS": {
+    "MONTH_CHART": {},
+    "WEEKLY_CHART": {
+      "header_title": "Weekly Revenue",
+      "extra_title": "This month"
+    }
   }
 }
