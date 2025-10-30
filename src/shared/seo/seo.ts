@@ -17,7 +17,7 @@ export const generateSeoMetadata = (locale: string, page: SeoPageKeys): SeoMetad
       break;
   }
 
-  const SEO = translationKey.SEO[page];
+  const SEO = translationKey.CHARTS.SEO[page];
 
   return {
     title: SEO.title,
