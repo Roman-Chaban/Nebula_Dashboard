@@ -7,7 +7,11 @@ export const HeaderInfo: FC<HeaderInfoProps> = ({ title, subtitle }) => {
   return (
     <Container className="flex flex-col">
       <Text
-        properties={{ size: 'md', color: 'text-secondary', weight: '500' }}
+        properties={{
+          size: 'md',
+          color: 'text-secondary dark:text-[var(--color-white)]',
+          weight: '500',
+        }}
         className="leading-extra inline-block"
       >
         {subtitle}
