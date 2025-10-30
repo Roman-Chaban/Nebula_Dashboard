@@ -27,7 +27,7 @@ export const ChartSvg: FC<ChartSvgProps> = ({
   <svg
     viewBox={`0 0 ${width} ${height}`}
     width="100%"
-    height="auto"
+    height="100%"
     className="block"
     onPointerMove={onPointerMove}
     onPointerUp={onPointerUp}
