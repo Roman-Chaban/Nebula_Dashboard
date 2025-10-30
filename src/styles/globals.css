@@ -15,6 +15,10 @@
 
   /* Icons Colors */
   --color-light-icon: #a3aed0;
+  --color-light-blue-icon: #4481eb;
+  --color-light-blue-icon-secondary: #04befe;
+  --color-light-white-icon-tertiary: #eafbff;
+  --color-light-white-icon-fourth: #d7d7d7;
 
   /* Linear Colors */
   --color-light-blue: #868cff;
