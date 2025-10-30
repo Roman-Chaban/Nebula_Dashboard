@@ -5,6 +5,7 @@ import { Earnings } from '@/widgets/Earnings/ui/Earnings';
 import { Locale, SEO_KEYS } from '@/shared/config/constants';
 import { generateSeoMetadata } from '@/shared/seo/seo';
 import { Charts } from '@/widgets/Charts/ui/Charts';
+import { CheckTable } from '@/widgets/CheckTable/ui/CheckTable';
 
 export type DashboardProps = {
   params: Promise<{ locale: Locale }>;
@@ -22,6 +23,7 @@ export default function DashboardPage() {
       <Container className="flex flex-col gap-5">
         <Earnings />
         <Charts />
+        <CheckTable />
       </Container>
     </PageLayout>
   );
