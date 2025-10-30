@@ -2,16 +2,18 @@
 
 import { type FC } from 'react';
 
-import { ChartsBox, ChartHeader } from '@/widgets/Charts/index';
 import { useTranslation } from 'react-i18next';
 import { WeeklyThumbs } from './WeeklyThumbs';
+import { CommonContainer } from '@/shared/ui/CommonContainer/CommonContainer';
+import { CommonHeader } from '@/shared/ui/Common/CommonHeader/CommonHeader';
+import { ChartIcon } from '@/shared/ui/Icons/Icons';
 
 export const WeeklyChart: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <ChartsBox paddingClass="pt-[29px] pr-[28.74px] pb-[27px] pl-[31px]">
-      <ChartHeader title={t('CHARTS.WEEKLY_CHART.header_title')} />
+    <CommonContainer paddingClass="pt-[29px] pr-[28.74px] pb-[27px] pl-[31px]">
+      <CommonHeader title={t('CHARTS.WEEKLY_CHART.header_title')} icon={<ChartIcon />} />
       <WeeklyThumbs
         columnWidth={15}
         segmentHeight={60}
@@ -21,6 +23,6 @@ export const WeeklyChart: FC = () => {
         topPadding={20}
         bottomMargin={30}
       />
-    </ChartsBox>
+    </CommonContainer>
   );
 };
