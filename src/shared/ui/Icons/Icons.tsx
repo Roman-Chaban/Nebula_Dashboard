@@ -578,3 +578,55 @@ export const DarkThemeBackground: FC<IconProps> = ({ className }) => (
     </defs>
   </svg>
 );
+
+export const CalendarIcon: FC = () => (
+  <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M13.5 1.5H12.75V0.75C12.75 0.3375 12.4125 0 12 0C11.5875 0 11.25 0.3375 11.25 0.75V1.5H3.75V0.75C3.75 0.3375 3.4125 0 3 0C2.5875 0 2.25 0.3375 2.25 0.75V1.5H1.5C0.675 1.5 0 2.175 0 3V15C0 15.825 0.675 16.5 1.5 16.5H13.5C14.325 16.5 15 15.825 15 15V3C15 2.175 14.325 1.5 13.5 1.5ZM12.75 15H2.25C1.8375 15 1.5 14.6625 1.5 14.25V5.25H13.5V14.25C13.5 14.6625 13.1625 15 12.75 15Z"
+      fill="#A3AED0"
+    />
+  </svg>
+);
+
+export const ChartIcon: FC = () => (
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M1.4 4.2H1.6C2.37 4.2 3 4.83 3 5.6V12.6C3 13.37 2.37 14 1.6 14H1.4C0.63 14 0 13.37 0 12.6V5.6C0 4.83 0.63 4.2 1.4 4.2ZM7 0C7.77 0 8.4 0.63 8.4 1.4V12.6C8.4 13.37 7.77 14 7 14C6.23 14 5.6 13.37 5.6 12.6V1.4C5.6 0.63 6.23 0 7 0ZM12.6 8C13.37 8 14 8.63 14 9.4V12.6C14 13.37 13.37 14 12.6 14C11.83 14 11.2 13.37 11.2 12.6V9.4C11.2 8.63 11.83 8 12.6 8Z"
+      fill="#4318FF"
+    />
+  </svg>
+);
+
+export const DoneTrackIcon: FC = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="16" height="16" rx="8" fill="#05CD99" />
+    <g clipPath="url(#clip0_201_1861)">
+      <path
+        d="M6.82081 9.74874L5.21665 8.14457C5.0379 7.96582 4.75373 7.96582 4.57498 8.14457C4.39623 8.32332 4.39623 8.60749 4.57498 8.78624L6.4954 10.7067C6.67415 10.8854 6.9629 10.8854 7.14165 10.7067L12 5.85291C12.1787 5.67416 12.1787 5.38999 12 5.21124C11.8212 5.03249 11.5371 5.03249 11.3583 5.21124L6.82081 9.74874Z"
+        fill="white"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_201_1861">
+        <rect width="11" height="11" fill="white" transform="translate(2.6958 2.32373)" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const TriangleIcon: FC = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="16" height="16" rx="8" fill="#05CD99" />
+    <g clipPath="url(#clip0_201_1861)">
+      <path
+        d="M6.82081 9.74874L5.21665 8.14457C5.0379 7.96582 4.75373 7.96582 4.57498 8.14457C4.39623 8.32332 4.39623 8.60749 4.57498 8.78624L6.4954 10.7067C6.67415 10.8854 6.9629 10.8854 7.14165 10.7067L12 5.85291C12.1787 5.67416 12.1787 5.38999 12 5.21124C11.8212 5.03249 11.5371 5.03249 11.3583 5.21124L6.82081 9.74874Z"
+        fill="white"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_201_1861">
+        <rect width="11" height="11" fill="white" transform="translate(2.6958 2.32373)" />
+      </clipPath>
+    </defs>
+  </svg>
+);
