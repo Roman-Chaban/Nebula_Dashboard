@@ -36,5 +36,25 @@
         "keywords": ["dashboard", "earnings", "analytics", "Nebula"]
       }
     }
+  },
+  "EARINGS": {
+    "earnings": "Earnings",
+    "earnings_subtitle": "$350.4",
+
+    "spend": "Spend this month",
+    "spend_subtitle": "$642.39",
+
+    "sales": "Sales",
+    "sales_subtitle": "$574.34",
+    "sales_extra": "+23% since last month",
+
+    "balance": "Your balance",
+    "balance_subtitle": "$1,000",
+
+    "tasks": "New Tasks",
+    "tasks_subtitle": "154",
+
+    "projects": "Total Projects",
+    "projects_subtitle": "2935"
   }
 }
