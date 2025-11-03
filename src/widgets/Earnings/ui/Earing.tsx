@@ -1,10 +1,17 @@
+'use client';
+
 import { type FC } from 'react';
 
 import { EaringProps } from '@/widgets/Earnings/model/types';
 import { Container, Heading, Text } from '@/shared/ui';
 import { parseExtraTitle } from '@/shared/utils/helpers/parseExtraTitle';
+import { useTranslation } from 'react-i18next';
 
 export const Earing: FC<EaringProps> = ({ earing }) => {
+  const { t } = useTranslation();
+  const title = t(earing.title);
+  const subtitle = t(earing.subtitle);
+  const extraTitle = earing.extraTitle ? t(earing.extraTitle) : '';
   const { percent, restText } = parseExtraTitle(earing.extraTitle);
 
   return (
@@ -15,12 +22,12 @@ export const Earing: FC<EaringProps> = ({ earing }) => {
       {earing.icon}
       <Container>
         <Heading level={3} className="text-[14px] font-medium text-[var(--color-light-icon)]">
-          {earing.title}
+          {title}
         </Heading>
         <Heading level={4} className="text-2xl font-bold text-[var(--color-primary)]">
-          {earing.subtitle}
+          {subtitle}
         </Heading>
-        {earing.extraTitle && (
+        {extraTitle && (
           <Text properties={{ size: 'sm', color: 'text-[var(--color-light-icon)]', weight: '400' }}>
             {percent && (
               <Text

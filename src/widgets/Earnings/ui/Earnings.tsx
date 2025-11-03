@@ -1,4 +1,5 @@
 import { type FC } from 'react';
+
 import { Earing } from '@/widgets/Earnings/index';
 import { Container, List } from '@/shared/ui';
 import { earingItems } from '@/widgets/Earnings/model/config';
