@@ -55,11 +55,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           </label>
         )}
 
-        <div className={inputClassnames.row}>
+        <Container className={inputClassnames.row}>
           {leading ? (
-            <span className={inputClassnames.iconLeft} aria-hidden="true">
+            <Container className={inputClassnames.iconLeft} aria-hidden="true">
               <span className={inputClassnames.icon}>{leading}</span>
-            </span>
+            </Container>
           ) : null}
 
           <input
@@ -76,12 +76,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
               <span className={inputClassnames.icon}>{trailing}</span>
             </span>
           ) : null}
-        </div>
+        </Container>
 
         {helperText ? (
-          <div id={helpId} className={inputClassnames.helper}>
+          <Container id={helpId} className={inputClassnames.helper}>
             {helperText}
-          </div>
+          </Container>
         ) : null}
 
         {children}
