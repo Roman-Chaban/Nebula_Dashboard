@@ -5,3 +5,8 @@ export type UseThemeToggleReturn = {
   toggleTheme: () => void;
   mounted: boolean;
 };
+
+export type NativeInputProps = Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  'size' | 'children'
+>;

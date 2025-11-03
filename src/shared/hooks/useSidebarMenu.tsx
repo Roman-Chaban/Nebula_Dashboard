@@ -11,7 +11,7 @@ import {
 
 import { LOCALES, ROUTES, type Locale } from '@/shared/config/constants';
 
-import { isLocale } from '@/shared/lib/helpers/isLocale';
+import { isLocale } from '@/shared/utils/helpers/isLocale';
 
 import type { NavItems, UpsellCardInfo, NavItem } from '@/widgets/Sidebar/model/types';
 
