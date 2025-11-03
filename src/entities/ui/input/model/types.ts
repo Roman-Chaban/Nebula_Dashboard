@@ -27,7 +27,7 @@ export type InputClassSlots =
 
 export type InputClassNames = Partial<Record<InputClassSlots, string>>;
 
-export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export type InputProps = {
   label?: string;
   description?: string;
   helperText?: string;
@@ -37,4 +37,4 @@ export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
   size?: InputSize;
   variant?: InputVariant;
   state?: InputState;
-}
+} & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>;
