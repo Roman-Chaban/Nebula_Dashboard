@@ -2,7 +2,10 @@
 
 import { forwardRef, useId } from 'react';
 import { CheckboxProps } from '@/entities/ui/checkbox/model/types';
-import { checkboxSizesMap, checkboxVariantsMap } from '@/shared/ui/Checkbox/lib/variants';
+import {
+  checkboxSizesMap,
+  checkboxVariantsMap,
+} from '@/shared/ui/Checkbox/lib/variants';
 import { useCheckbox } from '@/shared/hooks/useCheckbox';
 import { Input } from '@/shared/ui/index';
 
@@ -30,7 +33,10 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       ref: inputRefProp,
       getInputProps,
       getDataAttrs,
-    } = useCheckbox({ checked, defaultChecked, indeterminate, disabled, onCheckedChange }, ref);
+    } = useCheckbox(
+      { checked, defaultChecked, indeterminate, disabled, onCheckedChange },
+      ref,
+    );
 
     const sizes = checkboxSizesMap[size];
     const variants = checkboxVariantsMap[variant];
@@ -49,7 +55,12 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const labelTextClasses = [sizes.text].filter(Boolean).join(' ');
 
     return (
-      <label htmlFor={inputId} data-size={size} data-variant={variant} {...getDataAttrs()}>
+      <label
+        htmlFor={inputId}
+        data-size={size}
+        data-variant={variant}
+        {...getDataAttrs()}
+      >
         <Input
           variant={'ghost'}
           size={size}

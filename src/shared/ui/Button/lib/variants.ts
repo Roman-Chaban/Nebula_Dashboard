@@ -1,4 +1,8 @@
-import type { ButtonSize, ButtonTone, ButtonVariant } from '@/entities/ui/button/model/types';
+import type {
+  ButtonSize,
+  ButtonTone,
+  ButtonVariant,
+} from '@/entities/ui/button/model/types';
 
 export const baseButton = '';
 export const baseSpinner = '';

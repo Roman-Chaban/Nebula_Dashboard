@@ -1,4 +1,11 @@
-import { ChangeEvent, Ref, useCallback, useEffect, useMemo, useRef } from 'react';
+import {
+  ChangeEvent,
+  Ref,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+} from 'react';
 import { CheckboxProps } from '@/entities/ui/checkbox/model/types';
 import { mergeRefs } from '@/shared/utils/helpers/mergeRefs';
 import { NativeInputProps } from '@/shared/hooks/types';
@@ -6,14 +13,27 @@ import { NativeInputProps } from '@/shared/hooks/types';
 export const useCheckbox = (
   props: Pick<
     CheckboxProps,
-    'checked' | 'defaultChecked' | 'indeterminate' | 'disabled' | 'onCheckedChange'
+    | 'checked'
+    | 'defaultChecked'
+    | 'indeterminate'
+    | 'disabled'
+    | 'onCheckedChange'
   >,
   forwardedRef?: Ref<HTMLInputElement>,
 ) => {
-  const { checked, defaultChecked, indeterminate = false, disabled, onCheckedChange } = props;
+  const {
+    checked,
+    defaultChecked,
+    indeterminate = false,
+    disabled,
+    onCheckedChange,
+  } = props;
 
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const composedRef = useMemo(() => mergeRefs(inputRef, forwardedRef), [forwardedRef]);
+  const composedRef = useMemo(
+    () => mergeRefs(inputRef, forwardedRef),
+    [forwardedRef],
+  );
 
   useEffect(() => {
     if (inputRef.current) {
@@ -34,7 +54,9 @@ export const useCheckbox = (
     [onCheckedChange],
   );
 
-  const ariaChecked: React.AriaAttributes['aria-checked'] = indeterminate ? 'mixed' : visualChecked;
+  const ariaChecked: React.AriaAttributes['aria-checked'] = indeterminate
+    ? 'mixed'
+    : visualChecked;
 
   return {
     ref: composedRef,

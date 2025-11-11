@@ -1,7 +1,12 @@
 import { type FC } from 'react';
 import { IconProps } from '@/entities/ui/icons/model/types';
 
-export const HorizonLogo: FC<IconProps> = ({ width, height, fill, className }) => (
+export const HorizonLogo: FC<IconProps> = ({
+  width,
+  height,
+  fill,
+  className,
+}) => (
   <svg
     className={className}
     width={width}
@@ -155,7 +160,11 @@ export const SigninIcon: FC<IconProps> = ({ className }) => (
   </svg>
 );
 
-export const UpsellCardIcon: FC<IconProps> = ({ width = 94, height = 94, className }) => (
+export const UpsellCardIcon: FC<IconProps> = ({
+  width = 94,
+  height = 94,
+  className,
+}) => (
   <svg
     className={className}
     width={width}
@@ -166,7 +175,13 @@ export const UpsellCardIcon: FC<IconProps> = ({ width = 94, height = 94, classNa
   >
     <g filter="url(#filter0_d)">
       <circle cx="47" cy="47" r="47" fill="url(#grad0)" />
-      <circle cx="47" cy="47" r="44.5" stroke="var(--color-white)" strokeWidth="5" />
+      <circle
+        cx="47"
+        cy="47"
+        r="44.5"
+        stroke="var(--color-white)"
+        strokeWidth="5"
+      />
     </g>
 
     <defs>
@@ -196,7 +211,14 @@ export const UpsellCardIcon: FC<IconProps> = ({ width = 94, height = 94, classNa
         <feBlend in="SourceGraphic" in2="shadow" result="shape" />
       </filter>
 
-      <linearGradient id="grad0" x1="0" y1="0" x2="94" y2="94" gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="grad0"
+        x1="0"
+        y1="0"
+        x2="94"
+        y2="94"
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="var(--color-light-blue)" />
         <stop offset="1" stopColor="var(--color-deep-blue)" />
       </linearGradient>
@@ -204,7 +226,11 @@ export const UpsellCardIcon: FC<IconProps> = ({ width = 94, height = 94, classNa
   </svg>
 );
 
-export const UpsellCardMediumIcon: FC<IconProps> = ({ width, height, className }) => (
+export const UpsellCardMediumIcon: FC<IconProps> = ({
+  width,
+  height,
+  className,
+}) => (
   <svg
     className={className}
     width={width}
@@ -213,7 +239,10 @@ export const UpsellCardMediumIcon: FC<IconProps> = ({ width, height, className }
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M10.0923 27.3033H30.8176V36.3143H10.0923V27.3033Z" fill="var(--color-white)" />
+    <path
+      d="M10.0923 27.3033H30.8176V36.3143H10.0923V27.3033Z"
+      fill="var(--color-white)"
+    />
     <path
       d="M31.5385 29.1956C31.5385 26.2322 30.3707 23.3901 28.2922 21.2947C26.2136 19.1992 23.3945 18.022 20.4549 18.022C17.5154 18.022 14.6963 19.1992 12.6177 21.2947C10.5392 23.3901 9.37143 26.2322 9.37143 29.1956L20.4549 29.1956H31.5385Z"
       fill="var(--color-white)"
@@ -228,8 +257,20 @@ export const UpsellCardMediumIcon: FC<IconProps> = ({ width, height, className }
 );
 
 export const SearchIcon: FC = () => (
-  <svg width="12" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="5" cy="5" r="4.3" stroke="var(--color-primary)" strokeWidth="1.4" />
+  <svg
+    width="12"
+    height="12"
+    viewBox="0 0 11 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="5"
+      cy="5"
+      r="4.3"
+      stroke="var(--color-primary)"
+      strokeWidth="1.4"
+    />
     <line
       x1="10.0101"
       y1="11"
@@ -243,7 +284,13 @@ export const SearchIcon: FC = () => (
 );
 
 export const BellIcon: FC = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clipPath="url(#clip0_201_2884)">
       <path
         d="M19.2901 17.29L18.0001 16V11C18.0001 7.93 16.3601 5.36 13.5001 4.68V4C13.5001 3.17 12.8301 2.5 12.0001 2.5C11.1701 2.5 10.5001 3.17 10.5001 4V4.68C7.63005 5.36 6.00005 7.92 6.00005 11V16L4.71005 17.29C4.08005 17.92 4.52005 19 5.41005 19H18.5801C19.4801 19 19.9201 17.92 19.2901 17.29ZM16.0001 17H8.00005V11C8.00005 8.52 9.51005 6.5 12.0001 6.5C14.4901 6.5 16.0001 8.52 16.0001 11V17ZM12.0001 22C13.1001 22 14.0001 21.1 14.0001 20H10.0001C10.0001 21.1 10.8901 22 12.0001 22Z"
@@ -259,7 +306,13 @@ export const BellIcon: FC = () => (
 );
 
 export const MoonIcon: FC = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clipPath="url(#clip0_201_2097)">
       <path
         d="M9.95703 18C12.733 18 15.2684 16.737 16.9481 14.6675C17.1966 14.3613 16.9256 13.9141 16.5416 13.9872C12.1751 14.8188 8.16522 11.4709 8.16522 7.06303C8.16522 4.52398 9.52444 2.18914 11.7335 0.931992C12.074 0.738211 11.9884 0.221941 11.6015 0.150469C11.059 0.0504468 10.5086 8.21369e-05 9.95703 0C4.98914 0 0.957031 4.02578 0.957031 9C0.957031 13.9679 4.98281 18 9.95703 18Z"
@@ -275,7 +328,13 @@ export const MoonIcon: FC = () => (
 );
 
 export const InfoIcon: FC = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clipPath="url(#clip0_201_2879)">
       <path
         d="M11 7H13V9H11V7ZM12 17C12.55 17 13 16.55 13 16V12C13 11.45 12.55 11 12 11C11.45 11 11 11.45 11 12V16C11 16.55 11.45 17 12 17ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"
@@ -291,7 +350,13 @@ export const InfoIcon: FC = () => (
 );
 
 export const EaringIcon: FC = () => (
-  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <circle cx="28" cy="28" r="28" fill="var(--color-light-white)" />
     <g clipPath="url(#clip0_201_2498)">
       <path
@@ -313,7 +378,13 @@ export const EaringIcon: FC = () => (
 );
 
 export const SpendIcon: FC = () => (
-  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <circle cx="28" cy="28" r="28" fill="var(--color-light-white)" />
     <g clipPath="url(#clip0_201_2510)">
       <path
@@ -335,7 +406,13 @@ export const SpendIcon: FC = () => (
 );
 
 export const TasksIcon: FC = () => (
-  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <circle cx="28" cy="28" r="28" fill="url(#paint0_linear_201_1824)" />
     <g clipPath="url(#clip0_201_1824)">
       <path
@@ -356,14 +433,25 @@ export const TasksIcon: FC = () => (
         <stop offset="1" stopColor="var(--color-light-blue-icon-secondary)" />
       </linearGradient>
       <clipPath id="clip0_201_1824">
-        <rect width="28" height="28" fill="white" transform="translate(14 14)" />
+        <rect
+          width="28"
+          height="28"
+          fill="white"
+          transform="translate(14 14)"
+        />
       </clipPath>
     </defs>
   </svg>
 );
 
 export const ProjectsIcon: FC = () => (
-  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <circle cx="28" cy="28" r="28" fill="var(--color-light-white)" />
     <g clipPath="url(#clip0_201_1831)">
       <path
@@ -373,7 +461,12 @@ export const ProjectsIcon: FC = () => (
     </g>
     <defs>
       <clipPath id="clip0_201_1831">
-        <rect width="26" height="26" fill="white" transform="translate(15 15)" />
+        <rect
+          width="26"
+          height="26"
+          fill="white"
+          transform="translate(15 15)"
+        />
       </clipPath>
     </defs>
   </svg>
@@ -391,9 +484,30 @@ export const LightThemeBackground: FC<IconProps> = ({ className }) => (
     <g filter="url(#filter0_ddii_3_2)">
       <g clipPath="url(#clip0_3_2)">
         <rect x="4" y="8" width="371" height="140" rx="70" fill="#1A65AB" />
-        <ellipse cx="80" cy="80.5" rx="93" ry="92.5" fill="white" fillOpacity="0.1" />
-        <ellipse cx="80" cy="80" rx="130" ry="123" fill="white" fillOpacity="0.1" />
-        <ellipse cx="85" cy="84" rx="164" ry="155" fill="white" fillOpacity="0.1" />
+        <ellipse
+          cx="80"
+          cy="80.5"
+          rx="93"
+          ry="92.5"
+          fill="white"
+          fillOpacity="0.1"
+        />
+        <ellipse
+          cx="80"
+          cy="80"
+          rx="130"
+          ry="123"
+          fill="white"
+          fillOpacity="0.1"
+        />
+        <ellipse
+          cx="85"
+          cy="84"
+          rx="164"
+          ry="155"
+          fill="white"
+          fillOpacity="0.1"
+        />
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -430,8 +544,15 @@ export const LightThemeBackground: FC<IconProps> = ({ className }) => (
         <feOffset dy="4" />
         <feGaussianBlur stdDeviation="2" />
         <feComposite in2="hardAlpha" operator="out" />
-        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.62 0" />
-        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_2" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.62 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_3_2"
+        />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -441,9 +562,21 @@ export const LightThemeBackground: FC<IconProps> = ({ className }) => (
         <feOffset dy="-4" />
         <feGaussianBlur stdDeviation="2" />
         <feComposite in2="hardAlpha" operator="out" />
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-        <feBlend mode="normal" in2="effect1_dropShadow_3_2" result="effect2_dropShadow_3_2" />
-        <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_3_2" result="shape" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="effect1_dropShadow_3_2"
+          result="effect2_dropShadow_3_2"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect2_dropShadow_3_2"
+          result="shape"
+        />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -453,7 +586,10 @@ export const LightThemeBackground: FC<IconProps> = ({ className }) => (
         <feOffset dx="2" dy="6" />
         <feGaussianBlur stdDeviation="5" />
         <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.29 0" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.29 0"
+        />
         <feBlend mode="normal" in2="shape" result="effect3_innerShadow_3_2" />
         <feColorMatrix
           in="SourceAlpha"
@@ -464,8 +600,15 @@ export const LightThemeBackground: FC<IconProps> = ({ className }) => (
         <feOffset dx="1" dy="-6" />
         <feGaussianBlur stdDeviation="4.5" />
         <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-        <feBlend mode="normal" in2="effect3_innerShadow_3_2" result="effect4_innerShadow_3_2" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="effect3_innerShadow_3_2"
+          result="effect4_innerShadow_3_2"
+        />
       </filter>
       <clipPath id="clip0_3_2">
         <rect x="4" y="8" width="371" height="140" rx="70" fill="white" />
@@ -491,8 +634,22 @@ export const DarkThemeBackground: FC<IconProps> = ({ className }) => (
           fill="white"
           fillOpacity="0.1"
         />
-        <ellipse cx="247" cy="94" rx="164" ry="155" fill="white" fillOpacity="0.1" />
-        <ellipse cx="284" cy="80.5" rx="93" ry="92.5" fill="white" fillOpacity="0.1" />
+        <ellipse
+          cx="247"
+          cy="94"
+          rx="164"
+          ry="155"
+          fill="white"
+          fillOpacity="0.1"
+        />
+        <ellipse
+          cx="284"
+          cy="80.5"
+          rx="93"
+          ry="92.5"
+          fill="white"
+          fillOpacity="0.1"
+        />
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -535,8 +692,15 @@ export const DarkThemeBackground: FC<IconProps> = ({ className }) => (
         <feOffset dy="4" />
         <feGaussianBlur stdDeviation="2" />
         <feComposite in2="hardAlpha" operator="out" />
-        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.62 0" />
-        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_129" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.62 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_3_129"
+        />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -546,9 +710,21 @@ export const DarkThemeBackground: FC<IconProps> = ({ className }) => (
         <feOffset dy="-4" />
         <feGaussianBlur stdDeviation="2" />
         <feComposite in2="hardAlpha" operator="out" />
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-        <feBlend mode="normal" in2="effect1_dropShadow_3_129" result="effect2_dropShadow_3_129" />
-        <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_3_129" result="shape" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="effect1_dropShadow_3_129"
+          result="effect2_dropShadow_3_129"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect2_dropShadow_3_129"
+          result="shape"
+        />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -558,7 +734,10 @@ export const DarkThemeBackground: FC<IconProps> = ({ className }) => (
         <feOffset dx="2" dy="6" />
         <feGaussianBlur stdDeviation="5" />
         <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.29 0" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.29 0"
+        />
         <feBlend mode="normal" in2="shape" result="effect3_innerShadow_3_129" />
         <feColorMatrix
           in="SourceAlpha"
@@ -569,8 +748,15 @@ export const DarkThemeBackground: FC<IconProps> = ({ className }) => (
         <feOffset dx="1" dy="-6" />
         <feGaussianBlur stdDeviation="4.5" />
         <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-        <feBlend mode="normal" in2="effect3_innerShadow_3_129" result="effect4_innerShadow_3_129" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="effect3_innerShadow_3_129"
+          result="effect4_innerShadow_3_129"
+        />
       </filter>
       <clipPath id="clip0_3_129">
         <rect x="4" y="8" width="369" height="145" rx="72.5" fill="white" />
@@ -580,7 +766,13 @@ export const DarkThemeBackground: FC<IconProps> = ({ className }) => (
 );
 
 export const CalendarIcon: FC = () => (
-  <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="15"
+    height="17"
+    viewBox="0 0 15 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M13.5 1.5H12.75V0.75C12.75 0.3375 12.4125 0 12 0C11.5875 0 11.25 0.3375 11.25 0.75V1.5H3.75V0.75C3.75 0.3375 3.4125 0 3 0C2.5875 0 2.25 0.3375 2.25 0.75V1.5H1.5C0.675 1.5 0 2.175 0 3V15C0 15.825 0.675 16.5 1.5 16.5H13.5C14.325 16.5 15 15.825 15 15V3C15 2.175 14.325 1.5 13.5 1.5ZM12.75 15H2.25C1.8375 15 1.5 14.6625 1.5 14.25V5.25H13.5V14.25C13.5 14.6625 13.1625 15 12.75 15Z"
       fill="var(--color-light-icon)"
@@ -589,7 +781,13 @@ export const CalendarIcon: FC = () => (
 );
 
 export const ChartIcon: FC = () => (
-  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 14 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M1.4 4.2H1.6C2.37 4.2 3 4.83 3 5.6V12.6C3 13.37 2.37 14 1.6 14H1.4C0.63 14 0 13.37 0 12.6V5.6C0 4.83 0.63 4.2 1.4 4.2ZM7 0C7.77 0 8.4 0.63 8.4 1.4V12.6C8.4 13.37 7.77 14 7 14C6.23 14 5.6 13.37 5.6 12.6V1.4C5.6 0.63 6.23 0 7 0ZM12.6 8C13.37 8 14 8.63 14 9.4V12.6C14 13.37 13.37 14 12.6 14C11.83 14 11.2 13.37 11.2 12.6V9.4C11.2 8.63 11.83 8 12.6 8Z"
       fill="var(--color-deep-blue)"
@@ -598,7 +796,13 @@ export const ChartIcon: FC = () => (
 );
 
 export const DoneTrackIcon: FC = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <rect width="16" height="16" rx="8" fill="var(--color-light-green)" />
     <g clipPath="url(#clip0_201_1861)">
       <path
@@ -608,14 +812,25 @@ export const DoneTrackIcon: FC = () => (
     </g>
     <defs>
       <clipPath id="clip0_201_1861">
-        <rect width="11" height="11" fill="white" transform="translate(2.6958 2.32373)" />
+        <rect
+          width="11"
+          height="11"
+          fill="white"
+          transform="translate(2.6958 2.32373)"
+        />
       </clipPath>
     </defs>
   </svg>
 );
 
 export const TriangleIcon: FC = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <rect width="16" height="16" rx="8" fill="var(--color-light-green)" />
     <g clipPath="url(#clip0_201_1861)">
       <path
@@ -625,14 +840,25 @@ export const TriangleIcon: FC = () => (
     </g>
     <defs>
       <clipPath id="clip0_201_1861">
-        <rect width="11" height="11" fill="white" transform="translate(2.6958 2.32373)" />
+        <rect
+          width="11"
+          height="11"
+          fill="white"
+          transform="translate(2.6958 2.32373)"
+        />
       </clipPath>
     </defs>
   </svg>
 );
 
 export const DotsIcon: FC = () => (
-  <svg width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="16"
+    height="4"
+    viewBox="0 0 16 4"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0ZM14 0C12.9 0 12 0.9 12 2C12 3.1 12.9 4 14 4C15.1 4 16 3.1 16 2C16 0.9 15.1 0 14 0ZM8 0C6.9 0 6 0.9 6 2C6 3.1 6.9 4 8 4C9.1 4 10 3.1 10 2C10 0.9 9.1 0 8 0Z"
       fill="var( --color-deep-blue)"

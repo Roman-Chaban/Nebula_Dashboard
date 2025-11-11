@@ -1,7 +1,14 @@
 import { type FC } from 'react';
-import { SidebarLogo, SidebarNav, SidebarUpsellCard } from '@/widgets/Sidebar/index';
+import {
+  SidebarLogo,
+  SidebarNav,
+  SidebarUpsellCard,
+} from '@/widgets/Sidebar/index';
 import { Container } from '@/shared/ui/Container/Container';
-import { sidebarNavItems, upsellCardInfo } from '@/widgets/Sidebar/model/config';
+import {
+  sidebarNavItems,
+  upsellCardInfo,
+} from '@/widgets/Sidebar/model/config';
 
 const Sidebar: FC = () => {
   return (

@@ -31,7 +31,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 
     const userDescribedBy = rest['aria-describedby'] as string | undefined;
     const ariaDescribedBy =
-      [userDescribedBy, description ? descriptionId : undefined, helperText ? helpId : undefined]
+      [
+        userDescribedBy,
+        description ? descriptionId : undefined,
+        helperText ? helpId : undefined,
+      ]
         .filter(Boolean)
         .join(' ') || undefined;
 
@@ -39,7 +43,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       onChange?.(event);
     };
 
-    const inputClassnames = composeInputClasses({ classNames, size, variant, state });
+    const inputClassnames = composeInputClasses({
+      classNames,
+      size,
+      variant,
+      state,
+    });
 
     return (
       <Container className={inputClassnames.container}>

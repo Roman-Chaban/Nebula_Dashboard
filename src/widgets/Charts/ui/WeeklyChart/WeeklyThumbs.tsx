@@ -22,48 +22,46 @@ export const WeeklyThumbs: FC<WeeklyThumbsProps> = ({
 
   const weeklySegmentsData = data;
 
-  const {
-    segmentsStackHeight,
-    svgWidth,
-    svgHeight,
-    cornerRadius,
-  } = useMemo(() => {
-    const segmentsPerColumnLocal = weeklySegmentsData[0]?.segments?.length ?? 3;
-    const segmentsStackHeightLocal =
-      segmentBarHeight * segmentsPerColumnLocal +
-      segmentSpacing * (segmentsPerColumnLocal - 1);
+  const { segmentsStackHeight, svgWidth, svgHeight, cornerRadius } =
+    useMemo(() => {
+      const segmentsPerColumnLocal =
+        weeklySegmentsData[0]?.segments?.length ?? 3;
+      const segmentsStackHeightLocal =
+        segmentBarHeight * segmentsPerColumnLocal +
+        segmentSpacing * (segmentsPerColumnLocal - 1);
 
-    const columnsCountLocal = weeklySegmentsData.length;
+      const columnsCountLocal = weeklySegmentsData.length;
 
-    const chartContentWidthLocal =
-      horizontalPadding * 2 +
-      columnsCountLocal * barWidth +
-      (columnsCountLocal - 1) * columnSpacing;
+      const chartContentWidthLocal =
+        horizontalPadding * 2 +
+        columnsCountLocal * barWidth +
+        (columnsCountLocal - 1) * columnSpacing;
 
-    const svgWidthLocal = chartContentWidthLocal;
-    const svgHeightLocal = chartTopPadding + segmentsStackHeightLocal + chartBottomMargin;
+      const svgWidthLocal = chartContentWidthLocal;
+      const svgHeightLocal =
+        chartTopPadding + segmentsStackHeightLocal + chartBottomMargin;
 
-    const cornerRadiusLocal = Math.min(segmentBarHeight / 2, barWidth / 2);
+      const cornerRadiusLocal = Math.min(segmentBarHeight / 2, barWidth / 2);
 
-    return {
-      segmentsPerColumn: segmentsPerColumnLocal,
-      segmentsStackHeight: segmentsStackHeightLocal,
-      columnsCount: columnsCountLocal,
-      chartContentWidth: chartContentWidthLocal,
-      svgWidth: svgWidthLocal,
-      svgHeight: svgHeightLocal,
-      cornerRadius: cornerRadiusLocal,
-    };
-  }, [
-    weeklySegmentsData,
-    barWidth,
-    segmentBarHeight,
-    segmentSpacing,
-    columnSpacing,
-    horizontalPadding,
-    chartTopPadding,
-    chartBottomMargin,
-  ]);
+      return {
+        segmentsPerColumn: segmentsPerColumnLocal,
+        segmentsStackHeight: segmentsStackHeightLocal,
+        columnsCount: columnsCountLocal,
+        chartContentWidth: chartContentWidthLocal,
+        svgWidth: svgWidthLocal,
+        svgHeight: svgHeightLocal,
+        cornerRadius: cornerRadiusLocal,
+      };
+    }, [
+      weeklySegmentsData,
+      barWidth,
+      segmentBarHeight,
+      segmentSpacing,
+      columnSpacing,
+      horizontalPadding,
+      chartTopPadding,
+      chartBottomMargin,
+    ]);
 
   return (
     <Container htmlTag="div">
@@ -74,7 +72,13 @@ export const WeeklyThumbs: FC<WeeklyThumbsProps> = ({
         role="img"
         aria-label="Weekly Revenue — configurable rounded pills"
       >
-        <rect x="0" y="0" width={svgWidth} height={svgHeight} fill="transparent" />
+        <rect
+          x="0"
+          y="0"
+          width={svgWidth}
+          height={svgHeight}
+          fill="transparent"
+        />
 
         <g transform={`translate(${horizontalPadding}, 0)`}>
           {weeklySegmentsData.map((dayEntry, columnIndex) => {
@@ -82,10 +86,14 @@ export const WeeklyThumbs: FC<WeeklyThumbsProps> = ({
             const segmentStackTopOffset = chartTopPadding;
 
             return (
-              <g key={String(dayEntry.day)} transform={`translate(${columnX}, 0)`}>
+              <g
+                key={String(dayEntry.day)}
+                transform={`translate(${columnX}, 0)`}
+              >
                 {dayEntry.segments.map((segment, segmentIndex) => {
                   const segmentOffsetY =
-                    segmentStackTopOffset + segmentIndex * (segmentBarHeight + segmentSpacing);
+                    segmentStackTopOffset +
+                    segmentIndex * (segmentBarHeight + segmentSpacing);
 
                   const topRoundedPath = `
                     M 0 ${segmentBarHeight}
@@ -122,7 +130,12 @@ export const WeeklyThumbs: FC<WeeklyThumbsProps> = ({
 
                 <text
                   x={barWidth / 2}
-                  y={chartTopPadding + segmentsStackHeight + chartBottomMargin / 2 + 13}
+                  y={
+                    chartTopPadding +
+                    segmentsStackHeight +
+                    chartBottomMargin / 2 +
+                    13
+                  }
                   textAnchor="middle"
                   fontSize={15}
                   fill="var(--color-light-icon)"

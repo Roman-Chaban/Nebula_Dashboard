@@ -9,7 +9,10 @@
   },
   "PAGE_HEADERS": {
     "dashboard": { "title": "Main Dashboard", "subtitle": "Pages / Dashboard" },
-    "marketplace": { "title": "NFT Marketplace", "subtitle": "Pages / NFT Marketplace" },
+    "marketplace": {
+      "title": "NFT Marketplace",
+      "subtitle": "Pages / NFT Marketplace"
+    },
     "tables": { "title": "Tables", "subtitle": "Pages / Tables" },
     "kanban": { "title": "Kanban", "subtitle": "Pages / Kanban" },
     "profile": { "title": "Profile", "subtitle": "Pages / Profile" },

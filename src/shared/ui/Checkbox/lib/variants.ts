@@ -11,7 +11,10 @@ export const checkboxSizesMap: Record<CheckboxSize, CheckboxSizesMapProps> = {
   lg: { box: '', icon: '', text: '' },
 };
 
-export const checkboxVariantsMap: Record<CheckboxVariant, CheckboxVariantMapProps> = {
+export const checkboxVariantsMap: Record<
+  CheckboxVariant,
+  CheckboxVariantMapProps
+> = {
   default: {
     ring: '',
     checkedBg: '',

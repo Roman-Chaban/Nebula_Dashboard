@@ -1,4 +1,7 @@
-import { InputProps as BaseInputProps, InputClassNames } from '@/entities/ui/input/model/types';
+import {
+  InputProps as BaseInputProps,
+  InputClassNames,
+} from '@/entities/ui/input/model/types';
 
 export type InputVariant = 'solid' | 'outline' | 'ghost' | 'underline';
 export type InputSize = 'sm' | 'md' | 'lg';

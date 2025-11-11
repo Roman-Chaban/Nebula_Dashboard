@@ -13,7 +13,10 @@ export const WeeklyChart: FC = () => {
 
   return (
     <CommonContainer paddingClass="pt-[29px] pr-[28.74px] pb-[27px] pl-[31px]">
-      <CommonHeader title={t('CHARTS.WEEKLY_CHART.header_title')} icon={<ChartIcon />} />
+      <CommonHeader
+        title={t('CHARTS.WEEKLY_CHART.header_title')}
+        icon={<ChartIcon />}
+      />
       <WeeklyThumbs
         columnWidth={15}
         segmentHeight={60}

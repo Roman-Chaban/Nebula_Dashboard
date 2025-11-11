@@ -10,7 +10,10 @@ export const Container: FC<ContainerProps> = ({
   className,
 }) => {
   return (
-    <Tag className={className} style={{ width: parseSize(width), height: parseSize(height) }}>
+    <Tag
+      className={className}
+      style={{ width: parseSize(width), height: parseSize(height) }}
+    >
       {children}
     </Tag>
   );

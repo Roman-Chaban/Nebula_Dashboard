@@ -18,4 +18,8 @@ export type CheckboxProps = {
 >;
 
 export type CheckboxSizesMapProps = { box: string; icon: string; text: string };
-export type CheckboxVariantMapProps = { ring: string; checkedBg: string; border: string };
+export type CheckboxVariantMapProps = {
+  ring: string;
+  checkedBg: string;
+  border: string;
+};

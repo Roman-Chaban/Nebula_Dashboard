@@ -3,7 +3,13 @@ import { ButtonHTMLAttributes, ReactNode } from 'react';
 export type ButtonTypes = 'button' | 'submit' | 'reset';
 export type ButtonVariant = 'base' | 'solid' | 'outline' | 'ghost' | 'link';
 export type ButtonSize = 'sm' | 'md' | 'lg';
-export type ButtonTone = 'base' | 'neutral' | 'primary' | 'success' | 'warning' | 'danger';
+export type ButtonTone =
+  | 'base'
+  | 'neutral'
+  | 'primary'
+  | 'success'
+  | 'warning'
+  | 'danger';
 
 export type ButtonClassNames = {
   button?: string;
@@ -13,7 +19,10 @@ export type ButtonClassNames = {
   spinner?: string;
 };
 
-export type BaseButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'> & {
+export type BaseButtonProps = Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  'type'
+> & {
   type?: ButtonTypes;
   className?: string;
   classNames?: ButtonClassNames;

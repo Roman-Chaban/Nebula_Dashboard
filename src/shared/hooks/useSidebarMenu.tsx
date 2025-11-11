@@ -13,7 +13,11 @@ import { LOCALES, ROUTES, type Locale } from '@/shared/config/constants';
 
 import { isLocale } from '@/shared/utils/helpers/isLocale';
 
-import type { NavItems, UpsellCardInfo, NavItem } from '@/widgets/Sidebar/model/types';
+import type {
+  NavItems,
+  UpsellCardInfo,
+  NavItem,
+} from '@/widgets/Sidebar/model/types';
 
 const { HOME } = ROUTES;
 
@@ -32,14 +36,18 @@ export const useSidebarMenu = () => {
 
   if (Array.isArray(localeParam)) localeParam = localeParam[0];
 
-  const currentLocale: Locale = isLocale(localeParam) ? (localeParam as Locale) : LOCALES.EN;
+  const currentLocale: Locale = isLocale(localeParam)
+    ? (localeParam as Locale)
+    : LOCALES.EN;
 
   const { t } = useTranslation();
 
   const navItems: NavItems = useMemo(() => {
     return navItemsConfig.map<NavItem>((item) => {
       // Localize href: add /{locale} as prefix, considering HOME
-      const normalizedHref = item.href.startsWith(HOME) ? item.href : HOME + item.href;
+      const normalizedHref = item.href.startsWith(HOME)
+        ? item.href
+        : HOME + item.href;
       const localizedHref = `/${currentLocale}${normalizedHref}`;
 
       return {

@@ -10,7 +10,8 @@ export const useThemeToggle = () => {
   useEffect(() => {
     const stored = localStorage.getItem('theme') as Theme | null;
     if (stored) setTheme(stored);
-    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme(THEMES.DARK);
+    else if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+      setTheme(THEMES.DARK);
     setMounted(true);
   }, []);
 
@@ -22,7 +23,9 @@ export const useThemeToggle = () => {
   }, [theme, mounted]);
 
   const toggleTheme = () =>
-    setTheme((previousTheme) => (previousTheme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK));
+    setTheme((previousTheme) =>
+      previousTheme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK,
+    );
 
   return { theme, toggleTheme, mounted };
 };

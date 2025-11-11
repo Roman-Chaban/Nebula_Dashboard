@@ -3,7 +3,11 @@ import { type FC } from 'react';
 import { CommonHeaderProps } from '@/entities/ui/common/common-header/common-header';
 import { Button, Container, Heading } from '@/shared/ui';
 
-export const CommonHeader: FC<CommonHeaderProps> = ({ extraBlock, title, icon }) => {
+export const CommonHeader: FC<CommonHeaderProps> = ({
+  extraBlock,
+  title,
+  icon,
+}) => {
   const LABEL = extraBlock?.label;
   const ICON = extraBlock?.icon;
   return (
@@ -20,7 +24,10 @@ export const CommonHeader: FC<CommonHeaderProps> = ({ extraBlock, title, icon })
         </Container>
       )}
       {title && (
-        <Heading level={4} className="leading-base text-2xl font-bold text-[var(--color-tertiary)]">
+        <Heading
+          level={4}
+          className="leading-base text-2xl font-bold text-[var(--color-tertiary)]"
+        >
           {title}
         </Heading>
       )}

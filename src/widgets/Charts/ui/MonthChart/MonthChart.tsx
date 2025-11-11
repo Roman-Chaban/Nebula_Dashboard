@@ -14,7 +14,10 @@ export const MonthChart: FC = () => {
   return (
     <CommonContainer paddingClass="pt-[26px] pr-[32px] pb-[27px] pl-[31px] gap-[28px]">
       <CommonHeader
-        extraBlock={{ label: t('CHARTS.WEEKLY_CHART.extra_title'), icon: <CalendarIcon /> }}
+        extraBlock={{
+          label: t('CHARTS.WEEKLY_CHART.extra_title'),
+          icon: <CalendarIcon />,
+        }}
         icon={<ChartIcon />}
       />
       <MonthChartMain />

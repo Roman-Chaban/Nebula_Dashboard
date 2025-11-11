@@ -7,3 +7,5 @@ export { List } from '@/shared/ui/List/List';
 export { PageLayout } from '@/shared/ui/PageLayout/PageLayout';
 export { Text } from '@/shared/ui/Text/Text';
 export { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher/ThemeSwitcher';
+export { CommonContainer } from '@/shared/ui/CommonContainer/CommonContainer';
+export { CommonHeader } from '@/shared/ui/Common/CommonHeader/CommonHeader';

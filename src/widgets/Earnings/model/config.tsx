@@ -1,5 +1,10 @@
 import { EaringItems } from '@/widgets/Earnings/model/types';
-import { EaringIcon, ProjectsIcon, SpendIcon, TasksIcon } from '@/shared/ui/Icons/Icons';
+import {
+  EaringIcon,
+  ProjectsIcon,
+  SpendIcon,
+  TasksIcon,
+} from '@/shared/ui/Icons/Icons';
 
 export const earingItems: EaringItems = [
   {

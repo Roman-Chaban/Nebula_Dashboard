@@ -31,7 +31,12 @@ export const ChartKnob: FC<ChartKnobProps> = ({
     </g>
 
     <g transform={`translate(${knob.x}, ${knob.y})`} pointerEvents="none">
-      <circle r={9} fill="var(--color-white)" stroke="var(--color-chart-blue)" strokeWidth={3} />
+      <circle
+        r={9}
+        fill="var(--color-white)"
+        stroke="var(--color-chart-blue)"
+        strokeWidth={3}
+      />
       <circle r={4} fill="var(--color-chart-blue)" />
     </g>
   </>

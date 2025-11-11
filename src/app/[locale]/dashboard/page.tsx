@@ -11,7 +11,9 @@ export type DashboardProps = {
   params: Promise<{ locale: Locale }>;
 };
 
-export async function generateMetadata({ params }: DashboardProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: DashboardProps): Promise<Metadata> {
   const { locale } = await params;
 
   return generateSeoMetadata(locale, SEO_KEYS.DASHBOARD);

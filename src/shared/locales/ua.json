@@ -9,11 +9,17 @@
   },
   "PAGE_HEADERS": {
     "dashboard": { "title": "Головна Панель", "subtitle": "Сторінки / Панель" },
-    "marketplace": { "title": "NFT Маркетплейс", "subtitle": "Сторінки / NFT Маркетплейс" },
+    "marketplace": {
+      "title": "NFT Маркетплейс",
+      "subtitle": "Сторінки / NFT Маркетплейс"
+    },
     "tables": { "title": "Таблиці", "subtitle": "Сторінки / Таблиці" },
     "kanban": { "title": "Канбан", "subtitle": "Сторінки / Канбан" },
     "profile": { "title": "Профіль", "subtitle": "Сторінки / Профіль" },
-    "default": { "title": "Назва за замовчуванням", "subtitle": "Підзаголовок за замовчуванням" }
+    "default": {
+      "title": "Назва за замовчуванням",
+      "subtitle": "Підзаголовок за замовчуванням"
+    }
   },
   "UPSELL_CARD": {
     "title": "Оновіть до PRO",
