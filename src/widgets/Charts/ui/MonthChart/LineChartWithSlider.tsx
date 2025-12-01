@@ -7,7 +7,7 @@ import {
   SECONDARY_DATA_SERIES,
 } from '@/widgets/Charts/model/constants';
 
-import { useContainerWidth } from '@/shared/hooks/useResizeObserver';
+import { useResizeObserver } from '@/shared/hooks/useResizeObserver';
 import { useChartData } from '@/shared/hooks/useChartData';
 import { useChartInteractions } from '@/widgets/Charts/ui/MonthChart/hooks/useChartInteractions';
 import { useChartKnob } from '@/widgets/Charts/ui/MonthChart/hooks/useChartKnob';
@@ -22,7 +22,7 @@ import { useRef } from 'react';
 export default function LineChartWithSlider() {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const WIDTH = useContainerWidth(containerRef, 340);
+  const WIDTH = useResizeObserver({ containerRef, fallbackMinWidth: 300 });
   const HEIGHT = CHART_CONFIG.svg.height;
 
   const { primarySeriesPoints, primarySeriesPath, secondarySeriesPath } =
