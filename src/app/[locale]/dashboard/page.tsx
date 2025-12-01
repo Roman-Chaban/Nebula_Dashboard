@@ -2,7 +2,7 @@ import { type Metadata } from 'next';
 
 import { Locale, SEO_KEYS } from '@/shared/config/constants';
 import { generateSeoMetadata } from '@/shared/seo/seo';
-import { DashboardView } from '@/pages/dashboard/ui/DashboardView/DashboardView';
+import DashboardView from '@/pages/dashboard/ui/DashboardView/DashboardView';
 
 export type DashboardProps = {
   params: Promise<{ locale: Locale }>;
