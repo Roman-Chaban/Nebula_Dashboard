@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { Container, PageLayout } from '@/shared/ui/index';
 import { Earnings } from '@/widgets/Earnings/ui/Earnings';
-import { Charts } from '@/widgets/Charts/ui/Charts';
+import { Charts } from '@/widgets/Charts/ui/Charts/Charts';
 import { CheckTable } from '@/widgets/CheckTable/ui/CheckTable';
 
 const DashboardView: FC = () => {
