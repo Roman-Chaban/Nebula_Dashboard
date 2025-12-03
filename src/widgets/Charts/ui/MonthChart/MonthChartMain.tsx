@@ -2,7 +2,7 @@ import { type FC } from 'react';
 
 import { Container } from '@/shared/ui';
 import { MonthChartInformation } from '@/widgets/Charts/index';
-import LineChartWithSlider from './LineChartWithSlider';
+import { LineChartWithSlider } from './LineChartWithSlider';
 
 export const MonthChartMain: FC = () => {
   return (
