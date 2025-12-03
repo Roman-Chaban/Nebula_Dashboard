@@ -7,7 +7,12 @@ import { Header } from '@/widgets/Header/ui/Header';
 import { PAGE_HEADERS_MAP } from '@/shared/utils/helpers/pagesHeadersMap';
 import { usePathname, useParams } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
-import { LOCALES, type Locale, ROUTES, SUPPORTED_LOCALES } from '@/shared/config/constants';
+import {
+  LOCALES,
+  type Locale,
+  ROUTES,
+  SUPPORTED_LOCALES,
+} from '@/shared/config/constants';
 
 const { HOME } = ROUTES;
 

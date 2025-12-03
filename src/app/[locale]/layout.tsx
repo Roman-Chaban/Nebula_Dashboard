@@ -1,19 +1,15 @@
 'use client';
+
 import { ReactNode, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import i18n from '@/shared/i18n';
 import { GlobalProviders } from '@/shared/providers';
 import { LOCALES, type Locale } from '@/shared/config/constants';
+import { isLocale } from '@/shared/utils/helpers/isLocale';
 
-const SUPPORTED_LOCALES: Locale[] = [LOCALES.EN, LOCALES.UA];
-
-interface LocaleLayoutProps {
+type LocaleLayoutProps = {
   children: ReactNode;
-}
-
-function isLocale(lang: unknown): lang is Locale {
-  return typeof lang === 'string' && SUPPORTED_LOCALES.includes(lang as Locale);
-}
+};
 
 export default function LocaleLayout({ children }: LocaleLayoutProps) {
   const params = useParams();

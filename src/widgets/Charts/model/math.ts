@@ -21,7 +21,10 @@ export const normalizeSeriesToPoints = (
 
   return dataSeries.map((value, index) => {
     const x = padding.left + (index / (totalPoints - 1)) * drawableWidth;
-    const y = padding.top + drawableHeight - ((value - minValue) / valueRange) * drawableHeight;
+    const y =
+      padding.top +
+      drawableHeight -
+      ((value - minValue) / valueRange) * drawableHeight;
     return { x, y } as Point;
   });
 };
@@ -33,7 +36,9 @@ export const normalizeSeriesToPoints = (
 export const catmullRomToBezier = (chartPoints: Point[]): string => {
   if (chartPoints.length < 2) return '';
   const pathSegments: string[] = [];
-  pathSegments.push(`M ${chartPoints[0].x.toFixed(2)} ${chartPoints[0].y.toFixed(2)}`);
+  pathSegments.push(
+    `M ${chartPoints[0].x.toFixed(2)} ${chartPoints[0].y.toFixed(2)}`,
+  );
   for (let i = 0; i < chartPoints.length - 1; i++) {
     const previous = i > 0 ? chartPoints[i - 1] : chartPoints[i];
     const current = chartPoints[i];

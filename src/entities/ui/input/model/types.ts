@@ -1,5 +1,3 @@
-import { ReactNode, InputHTMLAttributes } from 'react';
-
 export type InputTypes =
   | 'text'
   | 'tel'
@@ -12,24 +10,31 @@ export type InputTypes =
   | 'url'
   | 'search';
 
-export type InputClassNames = {
-  container?: string;
-  label?: string;
-  input?: string;
-  inputRow?: string;
-  iconLeft?: string;
-  iconRight?: string;
-  icon: string;
-  description?: string;
-  helper?: string;
-};
+export type InputSize = 'sm' | 'md' | 'lg';
+export type InputVariant = 'solid' | 'outline' | 'ghost' | 'underline';
+export type InputState = 'default' | 'error' | 'success' | 'warning';
 
-export type BaseInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'children'> & {
-  label?: ReactNode;
-  description?: ReactNode;
-  helperText?: ReactNode;
+export type InputClassSlots =
+  | 'container'
+  | 'label'
+  | 'description'
+  | 'row'
+  | 'input'
+  | 'iconLeft'
+  | 'iconRight'
+  | 'icon'
+  | 'helper';
+
+export type InputClassNames = Partial<Record<InputClassSlots, string>>;
+
+export type InputProps = {
+  label?: string;
+  description?: string;
+  helperText?: string;
+  leading?: React.ReactNode;
+  trailing?: React.ReactNode;
   classNames?: InputClassNames;
-  children?: ReactNode;
-  leading?: ReactNode;
-  trailing?: ReactNode;
-};
+  size?: InputSize;
+  variant?: InputVariant;
+  state?: InputState;
+} & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>;

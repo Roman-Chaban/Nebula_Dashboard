@@ -20,7 +20,12 @@ export const MonthChartInformation: FC = () => {
             ...rest
           } = item;
           return (
-            <Container htmlTag="div" key={id} {...rest} className="flex flex-col gap-[25px]">
+            <Container
+              htmlTag="div"
+              key={id}
+              {...rest}
+              className="flex flex-col gap-[25px]"
+            >
               <Container htmlTag="div" className="flex flex-col gap-1">
                 <Heading
                   level={4}

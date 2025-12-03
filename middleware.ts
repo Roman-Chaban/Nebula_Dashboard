@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { SUPPORTED_LOCALES, ROUTES, type Locale } from '@/shared/config/constants';
+import {
+  SUPPORTED_LOCALES,
+  ROUTES,
+  type Locale,
+} from '@/shared/config/constants';
 import { toLocale } from '@/shared/utils/helpers/toLocale';
 
 const { HOME, DASHBOARD } = ROUTES;

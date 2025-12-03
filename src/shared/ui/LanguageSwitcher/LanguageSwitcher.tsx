@@ -2,7 +2,11 @@
 
 import { type FC, useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
-import { LOCALES, type Locale, SUPPORTED_LOCALES } from '@/shared/config/constants';
+import {
+  LOCALES,
+  type Locale,
+  SUPPORTED_LOCALES,
+} from '@/shared/config/constants';
 import i18n from '@/shared/i18n';
 import { Container } from '@/shared/ui/Container/Container';
 import { Button } from '@/shared/ui/Button/Button';
@@ -11,17 +15,22 @@ export const LanguageSwitcher: FC = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [currentLocale, setCurrentLocale] = useState<Locale>(
-    SUPPORTED_LOCALES.find((locale) => pathname?.startsWith(`/${locale}`)) || LOCALES.EN,
+    SUPPORTED_LOCALES.find((locale) => pathname?.startsWith(`/${locale}`)) ||
+      LOCALES.EN,
   );
 
   useEffect(() => {
-    const localeFromPath = SUPPORTED_LOCALES.find((locale) => pathname?.startsWith(`/${locale}`));
+    const localeFromPath = SUPPORTED_LOCALES.find((locale) =>
+      pathname?.startsWith(`/${locale}`),
+    );
     if (localeFromPath) setCurrentLocale(localeFromPath);
   }, [pathname]);
 
   const handleChange = (newLocale: Locale) => {
     if (newLocale === currentLocale) return;
-    const newPath = pathname?.replace(`/${currentLocale}`, `/${newLocale}`) || `/${newLocale}`;
+    const newPath =
+      pathname?.replace(`/${currentLocale}`, `/${newLocale}`) ||
+      `/${newLocale}`;
     i18n.changeLanguage(newLocale);
     setCurrentLocale(newLocale);
     router.push(newPath);

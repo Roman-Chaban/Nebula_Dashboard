@@ -1,40 +1,45 @@
 import { EaringItems } from '@/widgets/Earnings/model/types';
-import { EaringIcon, ProjectsIcon, SpendIcon, TasksIcon } from '@/shared/ui/Icons/Icons';
+import {
+  EaringIcon,
+  ProjectsIcon,
+  SpendIcon,
+  TasksIcon,
+} from '@/shared/ui/Icons/Icons';
 
 export const earingItems: EaringItems = [
   {
     id: 1,
     icon: <EaringIcon />,
-    title: 'Earnings',
-    subtitle: '$350.4',
+    title: 'EARINGS.earnings',
+    subtitle: 'EARINGS.earnings_subtitle',
   },
   {
     id: 2,
     icon: <SpendIcon />,
-    title: 'Spend this month',
-    subtitle: '$642.39',
+    title: 'EARINGS.spend',
+    subtitle: 'EARINGS.spend_subtitle',
   },
   {
     id: 3,
-    title: 'Sales',
-    subtitle: '$574.34',
-    extraTitle: '+23% since last month',
+    title: 'EARINGS.sales',
+    subtitle: 'EARINGS.sales_subtitle',
+    extraTitle: 'EARINGS.sales_extra',
   },
   {
     id: 4,
-    title: 'Your balance',
-    subtitle: '$1,000',
+    title: 'EARINGS.balance',
+    subtitle: 'EARINGS.balance_subtitle',
   },
   {
     id: 5,
     icon: <TasksIcon />,
-    title: 'New Tasks',
-    subtitle: '154',
+    title: 'EARINGS.tasks',
+    subtitle: 'EARINGS.tasks_subtitle',
   },
   {
     id: 6,
     icon: <ProjectsIcon />,
-    title: 'Total Projects',
-    subtitle: '2935',
+    title: 'EARINGS.projects',
+    subtitle: 'EARINGS.projects_subtitle',
   },
 ];

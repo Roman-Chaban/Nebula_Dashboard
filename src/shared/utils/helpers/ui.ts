@@ -3,7 +3,9 @@ export const mergeInputClassNames = (...parts: Array<string | undefined>) => {
 };
 
 export const mergeButtonClassNames = (
-  ...parts: Array<string | false | null | undefined | boolean | (string | undefined)[]>
+  ...parts: Array<
+    string | false | null | undefined | boolean | (string | undefined)[]
+  >
 ) => {
   const out: string[] = [];
 

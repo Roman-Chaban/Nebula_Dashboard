@@ -31,7 +31,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 
     const userDescribedBy = rest['aria-describedby'] as string | undefined;
     const ariaDescribedBy =
-      [userDescribedBy, description ? descriptionId : undefined, helperText ? helpId : undefined]
+      [
+        userDescribedBy,
+        description ? descriptionId : undefined,
+        helperText ? helpId : undefined,
+      ]
         .filter(Boolean)
         .join(' ') || undefined;
 
@@ -39,7 +43,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       onChange?.(event);
     };
 
-    const inputClassnames = composeInputClasses({ classNames, size, variant, state });
+    const inputClassnames = composeInputClasses({
+      classNames,
+      size,
+      variant,
+      state,
+    });
 
     return (
       <Container className={inputClassnames.container}>
@@ -55,11 +64,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           </label>
         )}
 
-        <div className={inputClassnames.row}>
+        <Container className={inputClassnames.row}>
           {leading ? (
-            <span className={inputClassnames.iconLeft} aria-hidden="true">
+            <Container className={inputClassnames.iconLeft} aria-hidden="true">
               <span className={inputClassnames.icon}>{leading}</span>
-            </span>
+            </Container>
           ) : null}
 
           <input
@@ -76,12 +85,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
               <span className={inputClassnames.icon}>{trailing}</span>
             </span>
           ) : null}
-        </div>
+        </Container>
 
         {helperText ? (
-          <div id={helpId} className={inputClassnames.helper}>
+          <Container id={helpId} className={inputClassnames.helper}>
             {helperText}
-          </div>
+          </Container>
         ) : null}
 
         {children}

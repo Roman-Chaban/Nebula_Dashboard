@@ -9,7 +9,10 @@
   },
   "PAGE_HEADERS": {
     "dashboard": { "title": "Main Dashboard", "subtitle": "Pages / Dashboard" },
-    "marketplace": { "title": "NFT Marketplace", "subtitle": "Pages / NFT Marketplace" },
+    "marketplace": {
+      "title": "NFT Marketplace",
+      "subtitle": "Pages / NFT Marketplace"
+    },
     "tables": { "title": "Tables", "subtitle": "Pages / Tables" },
     "kanban": { "title": "Kanban", "subtitle": "Pages / Kanban" },
     "profile": { "title": "Profile", "subtitle": "Pages / Profile" },
@@ -32,9 +35,28 @@
     "SEO": {
       "dashboard": {
         "title": "Nebula | Dashboard Page",
-        "description": "Dashboard page showing your earnings and performance metrics.",
-        "keywords": ["dashboard", "earnings", "analytics", "Nebula"]
+        "description": "Dashboard page showing your earnings and performance metrics."
       }
     }
+  },
+  "EARINGS": {
+    "earnings": "Earnings",
+    "earnings_subtitle": "$350.4",
+
+    "spend": "Spend this month",
+    "spend_subtitle": "$642.39",
+
+    "sales": "Sales",
+    "sales_subtitle": "$574.34",
+    "sales_extra": "+23% since last month",
+
+    "balance": "Your balance",
+    "balance_subtitle": "$1,000",
+
+    "tasks": "New Tasks",
+    "tasks_subtitle": "154",
+
+    "projects": "Total Projects",
+    "projects_subtitle": "2935"
   }
 }

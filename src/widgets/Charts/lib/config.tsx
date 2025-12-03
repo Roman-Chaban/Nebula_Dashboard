@@ -1,4 +1,7 @@
-import { DaysData, MonthChartInformationItems } from '@/widgets/Charts/model/types';
+import {
+  DaysData,
+  MonthChartInformationItems,
+} from '@/widgets/Charts/model/types';
 
 import { DoneTrackIcon } from '@/shared/ui/Icons/Icons';
 

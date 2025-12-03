@@ -1,42 +1,95 @@
-import { mergeInputClassNames } from '@/shared/utils/helpers/ui';
 import type {
-  ComposedInputClasses,
-  ComposeInputClassesParams,
-} from '@/shared/ui/Input/model/types';
+  InputClassNames,
+  InputSize,
+  InputVariant,
+  InputState,
+} from '@/entities/ui/input/model/types';
 import {
-  baseContainer,
-  baseInput,
-  baseInputRow,
-  baseLabel,
-  baseIconLeft,
-  baseIconRight,
-  baseIcon,
+  base,
   inputSizeMap,
-  stateMap,
   variantMap,
-} from '@/shared/ui/Input/lib/variants';
+  stateMap,
+} from '@/shared/ui/Input/lib/theme';
+import { joinNonEmpty } from '@/shared/utils/helpers/joinNonEmpty';
 
 export const composeInputClasses = ({
   classNames,
   size,
   variant,
   state,
-}: ComposeInputClassesParams): ComposedInputClasses => {
+}: {
+  classNames?: InputClassNames;
+  size: InputSize;
+  variant: InputVariant;
+  state: InputState;
+}): Required<InputClassNames> => {
+  const sizeC = inputSizeMap[size] ?? {};
+  const variantC = variantMap[variant] ?? {};
+  const stateC = stateMap[state] ?? {};
+
   return {
-    container: mergeInputClassNames(baseContainer, classNames?.container),
-    label: mergeInputClassNames(baseLabel, classNames?.label),
-    row: mergeInputClassNames(baseInputRow, classNames?.inputRow),
-    input: mergeInputClassNames(
-      baseInput,
-      inputSizeMap[size],
-      variantMap[variant],
-      stateMap[state],
+    container: joinNonEmpty(
+      base.container,
+      sizeC.container,
+      variantC.container,
+      stateC.container,
+      classNames?.container,
+    ),
+    label: joinNonEmpty(
+      base.label,
+      sizeC.label,
+      variantC.label,
+      stateC.label,
+      classNames?.label,
+    ),
+    description: joinNonEmpty(
+      base.description,
+      sizeC.description,
+      variantC.description,
+      stateC.description,
+      classNames?.description,
+    ),
+    row: joinNonEmpty(
+      base.row,
+      sizeC.row,
+      variantC.row,
+      stateC.row,
+      classNames?.row,
+    ),
+    input: joinNonEmpty(
+      base.input,
+      sizeC.input,
+      variantC.input,
+      stateC.input,
       classNames?.input,
     ),
-    iconLeft: mergeInputClassNames(baseIconLeft, classNames?.iconLeft),
-    iconRight: mergeInputClassNames(baseIconRight, classNames?.iconRight),
-    icon: mergeInputClassNames(baseIcon, classNames?.icon),
-    description: classNames?.description,
-    helper: classNames?.helper,
+    iconLeft: joinNonEmpty(
+      base.iconLeft,
+      sizeC.iconLeft,
+      variantC.iconLeft,
+      stateC.iconLeft,
+      classNames?.iconLeft,
+    ),
+    iconRight: joinNonEmpty(
+      base.iconRight,
+      sizeC.iconRight,
+      variantC.iconRight,
+      stateC.iconRight,
+      classNames?.iconRight,
+    ),
+    icon: joinNonEmpty(
+      base.icon,
+      sizeC.icon,
+      variantC.icon,
+      stateC.icon,
+      classNames?.icon,
+    ),
+    helper: joinNonEmpty(
+      base.helper,
+      sizeC.helper,
+      variantC.helper,
+      stateC.helper,
+      classNames?.helper,
+    ),
   };
 };

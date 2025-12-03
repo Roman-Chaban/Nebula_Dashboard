@@ -1,15 +1,21 @@
 import { type FC } from 'react';
-import { SidebarLogo, SidebarNav, SidebarUpsellCard } from '@/widgets/Sidebar/index';
+import {
+  SidebarLogo,
+  SidebarNav,
+  SidebarUpsellCard,
+} from '@/widgets/Sidebar/index';
 import { Container } from '@/shared/ui/Container/Container';
-import { sidebarNavItems, upsellCardInfo } from '@/widgets/Sidebar/model/config';
+import {
+  sidebarNavItems,
+  upsellCardInfo,
+} from '@/widgets/Sidebar/model/config';
 
 const Sidebar: FC = () => {
   return (
     <Container
       htmlTag="aside"
       width="100%"
-      height="100%"
-      className="flex min-h-screen max-w-72 flex-col bg-white dark:border-r-2 dark:border-[var(--color-white)] dark:bg-[var(--color-primary)]"
+      className="flex min-h-[100vh] max-w-72 flex-col bg-white dark:border-r-2 dark:border-[var(--color-white)] dark:bg-[var(--color-primary)]"
     >
       <SidebarLogo />
       <SidebarNav sidebarNavItems={sidebarNavItems} />

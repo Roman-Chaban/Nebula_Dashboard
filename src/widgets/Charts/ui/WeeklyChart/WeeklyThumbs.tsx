@@ -1,7 +1,7 @@
-import { type FC, useMemo } from 'react';
+import { type FC } from 'react';
 import { Container } from '@/shared/ui';
-import { data } from '@/widgets/Charts/lib/config';
 import { WeeklyThumbsProps } from '@/widgets/Charts/model/types';
+import { useWeeklyThumbs } from '@/shared/hooks/useWeeklyThumbs';
 
 export const WeeklyThumbs: FC<WeeklyThumbsProps> = ({
   columnWidth = 40,
@@ -12,49 +12,7 @@ export const WeeklyThumbs: FC<WeeklyThumbsProps> = ({
   topPadding = 18,
   bottomMargin = 28,
 }) => {
-  const barWidth = columnWidth;
-  const segmentBarHeight = segmentHeight;
-  const segmentSpacing = segmentGap;
-  const columnSpacing = gap;
-  const horizontalPadding = paddingX;
-  const chartTopPadding = topPadding;
-  const chartBottomMargin = bottomMargin;
-
-  const weeklySegmentsData = data;
-
   const {
-    segmentsStackHeight,
-    svgWidth,
-    svgHeight,
-    cornerRadius,
-  } = useMemo(() => {
-    const segmentsPerColumnLocal = weeklySegmentsData[0]?.segments?.length ?? 3;
-    const segmentsStackHeightLocal =
-      segmentBarHeight * segmentsPerColumnLocal +
-      segmentSpacing * (segmentsPerColumnLocal - 1);
-
-    const columnsCountLocal = weeklySegmentsData.length;
-
-    const chartContentWidthLocal =
-      horizontalPadding * 2 +
-      columnsCountLocal * barWidth +
-      (columnsCountLocal - 1) * columnSpacing;
-
-    const svgWidthLocal = chartContentWidthLocal;
-    const svgHeightLocal = chartTopPadding + segmentsStackHeightLocal + chartBottomMargin;
-
-    const cornerRadiusLocal = Math.min(segmentBarHeight / 2, barWidth / 2);
-
-    return {
-      segmentsPerColumn: segmentsPerColumnLocal,
-      segmentsStackHeight: segmentsStackHeightLocal,
-      columnsCount: columnsCountLocal,
-      chartContentWidth: chartContentWidthLocal,
-      svgWidth: svgWidthLocal,
-      svgHeight: svgHeightLocal,
-      cornerRadius: cornerRadiusLocal,
-    };
-  }, [
     weeklySegmentsData,
     barWidth,
     segmentBarHeight,
@@ -63,7 +21,19 @@ export const WeeklyThumbs: FC<WeeklyThumbsProps> = ({
     horizontalPadding,
     chartTopPadding,
     chartBottomMargin,
-  ]);
+    segmentsStackHeight,
+    svgWidth,
+    svgHeight,
+    cornerRadius,
+  } = useWeeklyThumbs({
+    columnWidth,
+    segmentHeight,
+    segmentGap,
+    gap,
+    paddingX,
+    topPadding,
+    bottomMargin,
+  });
 
   return (
     <Container htmlTag="div">
@@ -74,7 +44,13 @@ export const WeeklyThumbs: FC<WeeklyThumbsProps> = ({
         role="img"
         aria-label="Weekly Revenue — configurable rounded pills"
       >
-        <rect x="0" y="0" width={svgWidth} height={svgHeight} fill="transparent" />
+        <rect
+          x="0"
+          y="0"
+          width={svgWidth}
+          height={svgHeight}
+          fill="transparent"
+        />
 
         <g transform={`translate(${horizontalPadding}, 0)`}>
           {weeklySegmentsData.map((dayEntry, columnIndex) => {
@@ -82,10 +58,14 @@ export const WeeklyThumbs: FC<WeeklyThumbsProps> = ({
             const segmentStackTopOffset = chartTopPadding;
 
             return (
-              <g key={String(dayEntry.day)} transform={`translate(${columnX}, 0)`}>
+              <g
+                key={String(dayEntry.day)}
+                transform={`translate(${columnX}, 0)`}
+              >
                 {dayEntry.segments.map((segment, segmentIndex) => {
                   const segmentOffsetY =
-                    segmentStackTopOffset + segmentIndex * (segmentBarHeight + segmentSpacing);
+                    segmentStackTopOffset +
+                    segmentIndex * (segmentBarHeight + segmentSpacing);
 
                   const topRoundedPath = `
                     M 0 ${segmentBarHeight}
@@ -122,7 +102,12 @@ export const WeeklyThumbs: FC<WeeklyThumbsProps> = ({
 
                 <text
                   x={barWidth / 2}
-                  y={chartTopPadding + segmentsStackHeight + chartBottomMargin / 2 + 13}
+                  y={
+                    chartTopPadding +
+                    segmentsStackHeight +
+                    chartBottomMargin / 2 +
+                    13
+                  }
                   textAnchor="middle"
                   fontSize={15}
                   fill="var(--color-light-icon)"

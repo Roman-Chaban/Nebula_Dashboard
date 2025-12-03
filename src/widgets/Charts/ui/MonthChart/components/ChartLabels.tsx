@@ -2,7 +2,11 @@ import { type FC } from 'react';
 
 import type { ChartLabelsProps } from '@/widgets/Charts/model/types';
 
-export const ChartLabels: FC<ChartLabelsProps> = ({ points, labels, height }) => (
+export const ChartLabels: FC<ChartLabelsProps> = ({
+  points,
+  labels,
+  height,
+}) => (
   <>
     {points.map((point, index) => (
       <text

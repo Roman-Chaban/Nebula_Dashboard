@@ -9,11 +9,17 @@
   },
   "PAGE_HEADERS": {
     "dashboard": { "title": "Головна Панель", "subtitle": "Сторінки / Панель" },
-    "marketplace": { "title": "NFT Маркетплейс", "subtitle": "Сторінки / NFT Маркетплейс" },
+    "marketplace": {
+      "title": "NFT Маркетплейс",
+      "subtitle": "Сторінки / NFT Маркетплейс"
+    },
     "tables": { "title": "Таблиці", "subtitle": "Сторінки / Таблиці" },
     "kanban": { "title": "Канбан", "subtitle": "Сторінки / Канбан" },
     "profile": { "title": "Профіль", "subtitle": "Сторінки / Профіль" },
-    "default": { "title": "Назва за замовчуванням", "subtitle": "Підзаголовок за замовчуванням" }
+    "default": {
+      "title": "Назва за замовчуванням",
+      "subtitle": "Підзаголовок за замовчуванням"
+    }
   },
   "UPSELL_CARD": {
     "title": "Оновіть до PRO",
@@ -32,9 +38,28 @@
     "SEO": {
       "dashboard": {
         "title": "Nebula | Панель",
-        "description": "Сторінка панелі, що показує ваші доходи та показники.",
-        "keywords": ["панель", "дохід", "аналітика", "Nebula"]
+        "description": "Сторінка панелі, що показує ваші доходи та показники."
       }
     }
+  },
+  "EARINGS": {
+    "earnings": "Заробіток",
+    "earnings_subtitle": "$350.4",
+
+    "spend": "Витрати цього місяця",
+    "spend_subtitle": "$642.39",
+
+    "sales": "Продажі",
+    "sales_subtitle": "$574.34",
+    "sales_extra": "+23% з минулого місяця",
+
+    "balance": "Ваш баланс",
+    "balance_subtitle": "$1,000",
+
+    "tasks": "Нові завдання",
+    "tasks_subtitle": "154",
+
+    "projects": "Усього проектів",
+    "projects_subtitle": "2935"
   }
 }

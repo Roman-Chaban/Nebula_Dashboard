@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 import { ContainerProps } from '@/entities/ui/container/model/types';
-import { parseSize } from '@/shared/lib/helpers/parseSize';
+import { parseSize } from '@/shared/utils/helpers/parseSize';
 
 export const Container: FC<ContainerProps> = ({
   children,
@@ -10,7 +10,10 @@ export const Container: FC<ContainerProps> = ({
   className,
 }) => {
   return (
-    <Tag className={className} style={{ width: parseSize(width), height: parseSize(height) }}>
+    <Tag
+      className={className}
+      style={{ width: parseSize(width), height: parseSize(height) }}
+    >
       {children}
     </Tag>
   );

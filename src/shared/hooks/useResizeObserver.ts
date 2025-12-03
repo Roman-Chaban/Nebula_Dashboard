@@ -1,17 +1,22 @@
-import { RefObject, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+
+import type { UseResizeObserverProps } from '@/shared/hooks/types';
 
 /**
  * Hook: returns measured width of container element (minWidth fallback)
  * Usage: attach ref to parent and measure via getBoundingClientRect inside hook consumer.
  * Here we keep an internal width state and expose setter function.
  */
-export const useContainerWidth = (
-  containerRef: RefObject<HTMLElement | null>,
+export const useResizeObserver = ({
+  containerRef,
   fallbackMinWidth = 300,
-) => {
-  const [containerWidth, setContainerWidth] = useState<number>(fallbackMinWidth);
+}: UseResizeObserverProps) => {
+  const [containerWidth, setContainerWidth] =
+    useState<number>(fallbackMinWidth);
 
   useEffect(() => {
+    if (!containerRef?.current) return;
+
     const containerElement = containerRef.current;
     if (!containerElement) return;
 
@@ -21,6 +26,9 @@ export const useContainerWidth = (
     };
 
     handleResize();
+
+    if (typeof ResizeObserver === 'undefined') return;
+
     const resizeObserver = new ResizeObserver(handleResize);
     resizeObserver.observe(containerElement);
 
