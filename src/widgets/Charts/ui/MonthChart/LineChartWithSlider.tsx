@@ -19,7 +19,7 @@ import {
 import { Container } from '@/shared/ui';
 import { useRef } from 'react';
 
-export default function LineChartWithSlider() {
+export const LineChartWithSlider = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const WIDTH = useResizeObserver({ containerRef, fallbackMinWidth: 300 });
