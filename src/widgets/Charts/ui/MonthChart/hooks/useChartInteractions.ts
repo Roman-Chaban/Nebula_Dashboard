@@ -1,28 +1,49 @@
 import { useCallback } from 'react';
+import type { RefObject } from 'react';
 import type { Point } from '@/widgets/Charts/model/types';
 
+type UseChartInteractionsResult = {
+  clientXToIndex: (clientX: number) => number | null;
+  containerRef: RefObject<HTMLElement | null>;
+};
+
 export const useChartInteractions = (
-  containerRef: React.RefObject<HTMLElement | null>,
-  primarySeriesPoints: Point[],
-) => {
+  containerRef: RefObject<HTMLElement | null>,
+  primarySeriesPoints: readonly Point[],
+): UseChartInteractionsResult => {
   const clientXToIndex = useCallback(
-    (clientX: number) => {
-      if (!containerRef.current) return 0;
-      const svg = containerRef.current.querySelector('svg');
-      if (!svg) return 0;
+    (clientX: number): number | null => {
+      const container = containerRef.current;
+      if (!container) {
+        return null;
+      }
+
+      const svg = container.querySelector<SVGSVGElement>('svg');
+      if (!svg) {
+        return null;
+      }
+
+      if (!primarySeriesPoints || primarySeriesPoints.length === 0) {
+        return null;
+      }
+
       const rect = svg.getBoundingClientRect();
       const x = clientX - rect.left;
-      let best = 0;
-      let bestDist = Infinity;
-      if (!primarySeriesPoints || primarySeriesPoints.length === 0) return 0;
-      primarySeriesPoints.forEach((p, i) => {
-        const d = Math.abs(p.x - x);
-        if (d < bestDist) {
-          bestDist = d;
-          best = i;
+
+      let bestIndex = 0;
+      let bestDist = Number.POSITIVE_INFINITY;
+
+      for (let i = 0; i < primarySeriesPoints.length; i += 1) {
+        const point = primarySeriesPoints[i];
+        const dist = Math.abs(point.x - x);
+
+        if (dist < bestDist) {
+          bestDist = dist;
+          bestIndex = i;
         }
-      });
-      return best;
+      }
+
+      return bestIndex;
     },
     [containerRef, primarySeriesPoints],
   );
