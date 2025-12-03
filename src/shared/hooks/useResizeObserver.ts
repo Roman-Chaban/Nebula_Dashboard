@@ -1,9 +1,6 @@
-import { RefObject, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-type UseResizeObserverProps = {
-  containerRef: RefObject<HTMLElement | null> | null | undefined;
-  fallbackMinWidth?: number;
-};
+import type { UseResizeObserverProps } from '@/shared/hooks/types';
 
 /**
  * Hook: returns measured width of container element (minWidth fallback)
