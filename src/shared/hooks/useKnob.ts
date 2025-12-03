@@ -3,12 +3,18 @@ import { useCallback, useState, useRef } from 'react';
 export const useKnob = (
   initialIndex: number,
   count: number,
-  clientXToIndex: (x: number) => number,
+  clientXToIndex: (x: number) => number | null,
 ) => {
-  const [selectedIndex, setSelectedIndex] = useState<number>(() =>
-    Math.min(Math.max(0, initialIndex), Math.max(0, count - 1)),
+  const clamp = useCallback(
+    (value: number) => Math.min(Math.max(0, value), Math.max(0, count - 1)),
+    [count],
   );
-  const [isDragging, setIsDragging] = useState(false);
+
+  const [selectedIndex, setSelectedIndex] = useState<number>(() =>
+    clamp(initialIndex),
+  );
+
+  const [isDragging, setIsDragging] = useState<boolean>(false);
   const activePointerId = useRef<number | null>(null);
 
   const onPointerDown = useCallback(
@@ -18,28 +24,30 @@ export const useKnob = (
       } catch {}
       activePointerId.current = event.pointerId;
       setIsDragging(true);
-      const idx = clientXToIndex(event.clientX);
-      setSelectedIndex(() =>
-        Math.min(Math.max(0, idx), Math.max(0, count - 1)),
-      );
+
+      const clientIndex = clientXToIndex(event.clientX);
+      if (clientIndex !== null) {
+        setSelectedIndex(clamp(clientIndex));
+      }
     },
-    [clientXToIndex, count],
+    [clientXToIndex, clamp],
   );
 
   const onPointerMove = useCallback(
-    (e: React.PointerEvent) => {
+    (event: React.PointerEvent) => {
       if (!isDragging) return;
-      const idx = clientXToIndex(e.clientX);
-      setSelectedIndex(() =>
-        Math.min(Math.max(0, idx), Math.max(0, count - 1)),
-      );
+
+      const clientIndex = clientXToIndex(event.clientX);
+      if (clientIndex !== null) {
+        setSelectedIndex(clamp(clientIndex));
+      }
     },
-    [isDragging, clientXToIndex, count],
+    [isDragging, clientXToIndex, clamp],
   );
 
-  const onPointerUp = useCallback((e: React.PointerEvent) => {
+  const onPointerUp = useCallback((event: React.PointerEvent) => {
     try {
-      (e.currentTarget as Element).releasePointerCapture(e.pointerId);
+      (event.currentTarget as Element).releasePointerCapture(event.pointerId);
     } catch {}
     activePointerId.current = null;
     setIsDragging(false);
@@ -48,11 +56,11 @@ export const useKnob = (
   const onKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
       if (event.key === 'ArrowLeft')
-        setSelectedIndex((s) => Math.max(0, s - 1));
+        setSelectedIndex((selectedNumber) => clamp(selectedNumber - 1));
       if (event.key === 'ArrowRight')
-        setSelectedIndex((s) => Math.min(count - 1, s + 1));
+        setSelectedIndex((selectedNumber) => clamp(selectedNumber + 1));
     },
-    [count],
+    [clamp],
   );
 
   return {
