@@ -4,6 +4,7 @@ import { Container, PageLayout } from '@/shared/ui/index';
 import { Earnings } from '@/widgets/Earnings/ui/Earnings';
 import { Locale, SEO_KEYS } from '@/shared/config/constants';
 import { generateSeoMetadata } from '@/shared/seo/seo';
+import { Charts } from '@/widgets/Charts/ui/Charts';
 
 export type DashboardProps = {
   params: Promise<{ locale: Locale }>;
@@ -18,8 +19,9 @@ export async function generateMetadata({ params }: DashboardProps): Promise<Meta
 export default function DashboardPage() {
   return (
     <PageLayout>
-      <Container>
+      <Container className="flex flex-col gap-5">
         <Earnings />
+        <Charts />
       </Container>
     </PageLayout>
   );

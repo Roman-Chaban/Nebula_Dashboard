@@ -5,4 +5,5 @@ export { Input } from '@/shared/ui/Input/Input';
 export { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher/LanguageSwitcher';
 export { List } from '@/shared/ui/List/List';
 export { PageLayout } from '@/shared/ui/PageLayout/PageLayout';
+export { Text } from '@/shared/ui/Text/Text';
 export { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher/ThemeSwitcher';

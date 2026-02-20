@@ -1,7 +1,7 @@
 import { type FC } from 'react';
 
 import { EaringProps } from '@/widgets/Earnings/model/types';
-import { Container, Heading } from '@/shared/ui';
+import { Container, Heading, Text } from '@/shared/ui';
 import { parseExtraTitle } from '@/shared/utils/helpers/parseExtraTitle';
 
 export const Earing: FC<EaringProps> = ({ earing }) => {
@@ -21,12 +21,20 @@ export const Earing: FC<EaringProps> = ({ earing }) => {
           {earing.subtitle}
         </Heading>
         {earing.extraTitle && (
-          <span className="text-[12px] text-[var(--color-light-icon)]">
+          <Text properties={{ size: 'sm', color: 'text-[var(--color-light-icon)]', weight: '400' }}>
             {percent && (
-              <span className="font-bold text-[var(--color-light-green)]">{percent}</span>
-            )}{' '}
+              <Text
+                properties={{
+                  size: 'sm',
+                  color: 'text-[var(--color-light-green)]',
+                  weight: '700',
+                }}
+              >
+                {percent}{' '}
+              </Text>
+            )}
             {restText}
-          </span>
+          </Text>
         )}
       </Container>
     </Container>

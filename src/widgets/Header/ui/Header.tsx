@@ -1,4 +1,5 @@
 import { type FC } from 'react';
+
 import { HeaderProps } from '@/widgets/Header/model/types';
 import { HeaderInfo } from '@/widgets/Header/ui/HeaderInfo';
 import { HeaderInput } from '@/widgets/Header/ui/HeaderInput';
